@@ -1,0 +1,8 @@
+Zone ID,Zone Name,Key Assets,Physical System Controlled,Target SL-T,Permitted Conduits (To/From)
+A-PWR,Power Train A EPMS,"A-side UPS controllers, A-side PDU PLCs, A-side ATS",Power Train 'A',SL-T 3,"To Zone-M (SCADA) (Read-only, restricted ports).  All traffic to/from Zone B-PWR explicitly denied."
+B-PWR,Power Train B EPMS,"B-side UPS controllers, B-side PDU PLCs, B-side ATS",Power Train 'B',SL-T 3,"To Zone-M (SCADA) (Read-only, restricted ports).  All traffic to/from Zone A-PWR explicitly denied."
+N-CLG,Chiller Plant 'N' BMS,"Chiller 'N' PLCs, CRAH Group 'N' controllers, sensors",Primary Cooling Loop,SL-T 3,To Zone-M (SCADA) (Restricted ports/protocols).  All traffic to/from Zone N1-CLG explicitly denied.
+N1-CLG,Chiller Plant 'N+1' BMS,"Chiller 'N+1' PLCs, CRAH Group 'N+1' controllers, sensors",Redundant Cooling Loop,SL-T 3,To Zone-M (SCADA) (Restricted ports/protocols).  All traffic to/from Zone N-CLG explicitly denied.
+M-OPS,IACS Management Zone,"HMI Servers, Historian, Engineering Workstation",Supervisory Control & View,SL-T 3,"To/From A-PWR, B-PWR, N-CLG, N1-CLG (Highly restricted).  To/From DMZ (MFA required)."
+SEC-PACS,Physical Access Control,"PACS controllers, badge readers, man-trap controls",Facility Physical Access,SL-T 2,To/From M-OPS (Event logging only).
+DMZ,Remote Access DMZ,Secure Jump Host / Bastion Host,Remote Maintenance Access,SL-T 3,"To/From M-OPS (MFA, encrypted tunnel).  No direct access to control zones (A, B, N)."
