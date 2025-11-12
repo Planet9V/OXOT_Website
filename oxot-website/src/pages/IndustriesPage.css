@@ -1,0 +1,26 @@
+.industries-page {
+  padding: 6rem 2rem 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.industries-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.industry-card {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.industry-card h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}

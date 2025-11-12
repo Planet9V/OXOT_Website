@@ -1,0 +1,43 @@
+.services-page {
+  padding: 6rem 2rem 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.service-category {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.service-category h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.service-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-category li {
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.service-category li::before {
+  content: '✓';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
