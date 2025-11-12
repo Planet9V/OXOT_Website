@@ -1,0 +1,16 @@
+.service-sub-page {
+  padding: 6rem 2rem 2rem;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sub-page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+}
