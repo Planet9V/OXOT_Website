@@ -41,9 +41,24 @@
   --color-button-hover: hsla(0, 0%, 100%, 0.7);
   --color-border-alpha: hsla(0, 0%, 63.1%, 0.5);
 
-  /* Spacing (viewport-based) */
+  /* Spacing (viewport-based) - NexBank System */
   --spacing-mobile-side: 11.11vw;
   --spacing-desktop-side: 7.15vw;
+  --spacing-vw-mobile: 11.11vw;
+  --spacing-vw-desktop: 7.15vw;
+
+  /* Vertical spacing (multiples of 14px base unit) */
+  --spacing-unit: 14px;
+  --spacing-xs: calc(var(--spacing-unit) * 0.5); /* 7px */
+  --spacing-sm: var(--spacing-unit); /* 14px */
+  --spacing-md: calc(var(--spacing-unit) * 2); /* 28px */
+  --spacing-lg: calc(var(--spacing-unit) * 3); /* 42px */
+  --spacing-xl: calc(var(--spacing-unit) * 4); /* 56px */
+  --spacing-xxl: calc(var(--spacing-unit) * 6); /* 84px */
+
+  /* Section padding (viewport-based) */
+  --section-padding-mobile: 16.67vw;
+  --section-padding-desktop: 10.5vw;
 
   /* Logo positioning */
   --logo-top-mobile: 42px;
@@ -144,12 +159,13 @@ h4,
 h5,
 h6 {
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.15; /* NexBank: tight heading spacing */
   margin: 0;
 }
 
 p {
   margin: 0;
+  line-height: 1.6; /* NexBank: comfortable reading */
 }
 
 a {
@@ -222,12 +238,12 @@ button {
 .section {
   position: relative;
   width: 100%;
-  padding: 60px 0;
+  padding: var(--section-padding-mobile) 0; /* NexBank: 16.67vw mobile */
 }
 
 @media screen and (min-width: 600px) {
   .section {
-    padding: 100px 0;
+    padding: var(--section-padding-desktop) 0; /* NexBank: 10.5vw desktop */
   }
 }
 

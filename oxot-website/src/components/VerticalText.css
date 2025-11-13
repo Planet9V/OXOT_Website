@@ -1,0 +1,32 @@
+/* Vertical Text - Right Edge */
+.vertical-text {
+  position: fixed;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%) rotate(90deg);
+  transform-origin: center;
+  z-index: 1000;
+}
+
+.vertical-text__content {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.vertical-text__content:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+/* Mobile - Hide on small screens */
+@media screen and (max-width: 768px) {
+  .vertical-text {
+    display: none;
+  }
+}

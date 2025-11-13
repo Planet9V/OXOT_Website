@@ -1,0 +1,44 @@
+{
+  "logo": {
+    "width": 200,
+    "height": 28.5,
+    "top": 74,
+    "left": 137.265625
+  },
+  "navToggle": {
+    "width": 105.140625,
+    "height": 52,
+    "top": 70,
+    "left": 1672.59375
+  },
+  "heroCarousel": {
+    "width": 1905,
+    "height": 1080,
+    "top": 0,
+    "left": 0
+  },
+  "heroTitle": {
+    "width": 600,
+    "height": 331.1875,
+    "top": 299.609375,
+    "left": 137.265625
+  },
+  "serviceCards": [
+    {
+      "width": 348.484375,
+      "height": 369.96875
+    },
+    {
+      "width": 348.484375,
+      "height": 369.96875
+    },
+    {
+      "width": 348.5,
+      "height": 369.96875
+    },
+    {
+      "width": 348.484375,
+      "height": 369.96875
+    }
+  ]
+}

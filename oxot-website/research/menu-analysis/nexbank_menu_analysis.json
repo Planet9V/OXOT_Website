@@ -1,0 +1,103 @@
+{
+  "navigation_structure": {
+    "top_level_items": 17,
+    "items": [
+      {
+        "text": "",
+        "tag": "A",
+        "classes": "nav__logo"
+      },
+      {
+        "text": "Institutional Banking",
+        "tag": "A",
+        "classes": "nav__item__link"
+      },
+      {
+        "text": "Financial Institutions",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Public Funds",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Treasury Management",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Commercial Banking",
+        "tag": "A",
+        "classes": "nav__item__link"
+      },
+      {
+        "text": "Commercial Lending",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Commercial  \nReal Estate Lending",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Financial Institutions",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Treasury Management",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Mortgage Banking",
+        "tag": "A",
+        "classes": "nav__item__link"
+      },
+      {
+        "text": "Wholesale and\nCorrespondent Lending",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Warehouse Lending",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "Become a Client",
+        "tag": "A",
+        "classes": "nav__anchor__link js-anchor-link"
+      },
+      {
+        "text": "About",
+        "tag": "A",
+        "classes": "nav__item__link"
+      },
+      {
+        "text": "Contact",
+        "tag": "A",
+        "classes": "nav__item__link"
+      },
+      {
+        "text": "Online Banking Login",
+        "tag": "A",
+        "classes": "nav__login underlined-cta underlined-cta--parent"
+      }
+    ]
+  },
+  "carousel_system": {},
+  "animations": {},
+  "color_scheme": {},
+  "typography": {},
+  "numbered_items": {},
+  "timing_observations": [
+    {
+      "action": "Menu open",
+      "duration": "7807ms"
+    }
+  ]
+}

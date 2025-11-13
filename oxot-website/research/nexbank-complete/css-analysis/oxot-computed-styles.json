@@ -1,0 +1,62 @@
+{
+  "body": {
+    "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgb(255, 255, 255)",
+    "backgroundImage": "none",
+    "fontSize": "16px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(58, 59, 59)",
+    "padding": "0px",
+    "margin": "0px",
+    "position": "static",
+    "zIndex": "auto"
+  },
+  "heroCarousel": {
+    "background": "rgb(31, 33, 37) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgb(31, 33, 37)",
+    "backgroundImage": "none",
+    "fontSize": "16px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(255, 255, 255)",
+    "padding": "0px",
+    "margin": "0px",
+    "position": "relative",
+    "zIndex": "auto"
+  },
+  "heroSlide": {
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "fontSize": "16px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(255, 255, 255)",
+    "padding": "0px 137.28px",
+    "margin": "0px",
+    "position": "absolute",
+    "zIndex": "auto"
+  },
+  "navigation": {
+    "background": "rgba(26, 27, 28, 0.95) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(26, 27, 28, 0.95)",
+    "backgroundImage": "none",
+    "fontSize": "16px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(58, 59, 59)",
+    "padding": "0px",
+    "margin": "0px",
+    "position": "fixed",
+    "zIndex": "999"
+  },
+  "logo": {
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "fontSize": "16px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(255, 255, 255)",
+    "padding": "0px",
+    "margin": "0px",
+    "position": "fixed",
+    "zIndex": "1000"
+  }
+}

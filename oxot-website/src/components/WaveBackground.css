@@ -1,0 +1,83 @@
+/* Wave Background Container */
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+  background-color: #0f0f0f;
+}
+
+.wave-background--dark {
+  background-color: #0f0f0f;
+}
+
+.wave-background--light {
+  background-color: #f8f8f8;
+}
+
+/* Diagonal Stripe Pattern - NexBank Style */
+.wave-background__stripes {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 60%;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.03) 2px,
+    rgba(255, 255, 255, 0.03) 4px
+  );
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Outlined Typography - NexBank Style */
+.wave-background__typography {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.outlined-text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(120px, 15vw, 280px);
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  text-stroke: 1px rgba(255, 255, 255, 0.15);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  opacity: 0.8;
+  user-select: none;
+}
+
+/* Content Layer */
+.wave-background__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .wave-background__stripes {
+    width: 100%;
+    height: 40%;
+  }
+
+  .outlined-text {
+    font-size: clamp(80px, 20vw, 120px);
+    -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.15);
+  }
+}

@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
+import MenuOverlay from './MenuOverlay';
+import menuData from '../data/menuData';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOverlayOpen, setIsMenuOverlayOpen] = useState(false);
+  const [currentMenuSection, setCurrentMenuSection] = useState(null);
 
   useEffect(() => {
     // Update body class based on nav state
@@ -29,6 +33,8 @@ const Navigation = () => {
       page: 'service-institutional-banking',
       label: 'Institutional Banking',
       href: '/service/institutional-banking',
+      menuSection: 'institutional',
+      isService: true,
       anchors: [
         { index: 0, label: 'Financial Institutions', href: '#institutional_financial_institutions' },
         { index: 1, label: 'Investment Management', href: '#institutional_investment_management' },
@@ -39,6 +45,8 @@ const Navigation = () => {
       page: 'service-commercial-banking',
       label: 'Commercial Banking',
       href: '/service/commercial-banking',
+      menuSection: 'commercial',
+      isService: true,
       anchors: [
         { index: 0, label: 'Real Estate', href: '#commercial_real_estate' },
         { index: 1, label: 'Middle Market', href: '#commercial_middle_market' },
@@ -49,6 +57,8 @@ const Navigation = () => {
       page: 'service-mortgage-banking',
       label: 'Mortgage Banking',
       href: '/service/mortgage-banking',
+      menuSection: 'mortgage',
+      isService: true,
       anchors: [
         { index: 0, label: 'Correspondent Lending', href: '#mortgage_correspondent' },
         { index: 1, label: 'Warehouse Lending', href: '#mortgage_warehouse' }
@@ -58,15 +68,27 @@ const Navigation = () => {
       page: 'about',
       label: 'About',
       href: '/about',
+      isService: false,
       anchors: []
     },
     {
       page: 'contact',
       label: 'Contact',
       href: '/contact',
+      isService: false,
       anchors: []
     }
   ];
+
+  const handleNavItemClick = (item, e) => {
+    if (item.isService) {
+      e.preventDefault();
+      setCurrentMenuSection(item.menuSection);
+      setIsMenuOverlayOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  };
 
   return (
     <>
@@ -118,14 +140,25 @@ const Navigation = () => {
                 data-page={item.page}
                 style={{ transitionDelay: `${0.1 + index * 0.1}s` }}
               >
-                <Link
-                  className="nav__item__link"
-                  to={item.href}
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className="nav__item__arrow"></span>
-                  <span className="nav__item__label">{item.label}</span>
-                </Link>
+                {item.isService ? (
+                  <a
+                    className="nav__item__link"
+                    href={item.href}
+                    onClick={(e) => handleNavItemClick(item, e)}
+                  >
+                    <span className="nav__item__arrow"></span>
+                    <span className="nav__item__label">{item.label}</span>
+                  </a>
+                ) : (
+                  <Link
+                    className="nav__item__link"
+                    to={item.href}
+                    onClick={(e) => handleNavItemClick(item, e)}
+                  >
+                    <span className="nav__item__arrow"></span>
+                    <span className="nav__item__label">{item.label}</span>
+                  </Link>
+                )}
 
                 {item.anchors.length > 0 && (
                   <ul className="nav__anchors">
@@ -160,6 +193,18 @@ const Navigation = () => {
           </a>
         </div>
       </nav>
+
+      {isMenuOverlayOpen && currentMenuSection && (
+        <MenuOverlay
+          sectionId={currentMenuSection}
+          isOpen={isMenuOverlayOpen}
+          onClose={() => {
+            setIsMenuOverlayOpen(false);
+            setCurrentMenuSection(null);
+            setIsOpen(false);
+          }}
+        />
+      )}
     </>
   );
 };

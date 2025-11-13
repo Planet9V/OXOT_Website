@@ -1,12 +1,20 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import ThreeBackground from './ThreeBackground';
+import CarouselNavigation from './CarouselNavigation';
+import BottomTabNavigation from './BottomTabNavigation';
+import VerticalText from './VerticalText';
+import MenuOverlay from './MenuOverlay';
+import menuData from '../data/menuData';
 import './HeroCarousel.css';
 
 const HeroCarousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeTab, setActiveTab] = useState('institutional');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [currentMenuSection, setCurrentMenuSection] = useState(null);
   const carouselRef = useRef(null);
   const slidesRef = useRef([]);
-  const videoRef = useRef(null);
   const autoPlayRef = useRef(null);
 
   useEffect(() => {
@@ -32,6 +40,18 @@ const HeroCarousel = ({ slides }) => {
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
+  };
+
+  const handleTabChange = (tabId) => {
+    setActiveTab(tabId);
+    // Open 3-slide menu overlay with NexBank-style sequence
+    setCurrentMenuSection(tabId);
+    setIsMenuOpen(true);
+  };
+
+  const handleMenuClose = () => {
+    setIsMenuOpen(false);
+    setCurrentMenuSection(null);
   };
 
   useEffect(() => {
@@ -62,11 +82,8 @@ const HeroCarousel = ({ slides }) => {
 
   return (
     <div className="hero-carousel" ref={carouselRef}>
-      {/* Animated Background */}
-      <div className="hero-carousel__background">
-        <div className="hero-carousel__gradient"></div>
-        <div className="hero-carousel__particles"></div>
-      </div>
+      {/* Three.js Geometric Background */}
+      <ThreeBackground />
 
       {/* Slides */}
       <div className="hero-carousel__slides">
@@ -75,27 +92,8 @@ const HeroCarousel = ({ slides }) => {
             key={slide.id}
             className={`hero-slide ${index === currentSlide ? 'is-active' : ''}`}
             ref={(el) => (slidesRef.current[index] = el)}
-            style={{
-              backgroundImage: slide.backgroundVideo
-                ? 'none'
-                : `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${slide.backgroundImage})`,
-            }}
           >
-            {slide.backgroundVideo && (
-              <video
-                ref={videoRef}
-                className="hero-slide__video"
-                autoPlay
-                loop
-                muted
-                playsInline
-                onLoadedData={(e) => {
-                  e.target.play().catch(err => console.log('Video play prevented:', err));
-                }}
-              >
-                <source src={slide.backgroundVideo} type="video/mp4" />
-              </video>
-            )}
+            {/* Removed video/image backgrounds - NexBank uses solid colors only */}
 
             <div className="hero-slide__content">
               <div className="hero-slide__category">{slide.category}</div>
@@ -115,39 +113,28 @@ const HeroCarousel = ({ slides }) => {
         ))}
       </div>
 
-      {/* Navigation Controls */}
-      <div className="hero-carousel__controls">
-        <button
-          className="hero-carousel__arrow hero-carousel__arrow--prev"
-          onClick={prevSlide}
-          aria-label="Previous slide"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" />
-          </svg>
-        </button>
-        <button
-          className="hero-carousel__arrow hero-carousel__arrow--next"
-          onClick={nextSlide}
-          aria-label="Next slide"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M9 6L15 12L9 18" stroke="currentColor" strokeWidth="2" />
-          </svg>
-        </button>
-      </div>
+      {/* Carousel Navigation with Circular Buttons + Pagination */}
+      <CarouselNavigation
+        currentSlide={currentSlide}
+        totalSlides={slides.length}
+        onPrev={prevSlide}
+        onNext={nextSlide}
+      />
 
-      {/* Slide Indicators */}
-      <div className="hero-carousel__dots">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            className={`hero-carousel__dot ${index === currentSlide ? 'is-active' : ''}`}
-            onClick={() => goToSlide(index)}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      {/* Bottom Tab Navigation */}
+      <BottomTabNavigation activeTab={activeTab} onTabChange={handleTabChange} />
+
+      {/* Vertical Text - Online Banking Login */}
+      <VerticalText text="Online Banking Login" />
+
+      {/* 3-Slide Menu Overlay - NexBank Style */}
+      {isMenuOpen && currentMenuSection && menuData[currentMenuSection] && (
+        <MenuOverlay
+          sectionId={currentMenuSection}
+          isOpen={isMenuOpen}
+          onClose={handleMenuClose}
+        />
+      )}
     </div>
   );
 };

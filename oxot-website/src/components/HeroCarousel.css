@@ -4,60 +4,10 @@
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #0a0a0a;
+  background-color: #1f2125; /* NexBank solid dark background */
 }
 
-/* Animated Background */
-.hero-carousel__background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-carousel__gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(21, 67, 114, 0.3) 0%,
-    rgba(10, 10, 10, 0.8) 70%
-  );
-  animation: gradientPulse 8s ease-in-out infinite;
-}
-
-.hero-carousel__particles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image:
-    radial-gradient(2px 2px at 20% 30%, rgba(255, 255, 255, 0.1), transparent),
-    radial-gradient(2px 2px at 80% 70%, rgba(21, 67, 114, 0.1), transparent),
-    radial-gradient(1px 1px at 50% 50%, rgba(193, 2, 48, 0.1), transparent);
-  background-size: 200px 200px, 300px 300px, 250px 250px;
-  animation: particleFloat 20s linear infinite;
-}
-
-@keyframes gradientPulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes particleFloat {
-  0% {
-    background-position: 0 0, 0 0, 0 0;
-  }
-  100% {
-    background-position: 200px 200px, -300px 300px, 250px -250px;
-  }
-}
+/* Old background removed - now using WaveBackground component */
 
 /* Slides Container */
 .hero-carousel__slides {
@@ -76,11 +26,11 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease-in-out, visibility 0s 1s;
-  background-size: cover;
-  background-position: center;
+  /* Removed background-size and background-position - no images */
+  background: transparent; /* NexBank: solid color background only */
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* NexBank: left-aligned, not centered */
   padding: 0 var(--spacing-vw-desktop, 7.15vw);
 }
 
@@ -91,22 +41,20 @@
 }
 
 .hero-slide__video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.5);
+  /* Removed - NexBank does not use video backgrounds */
+  display: none;
 }
 
-/* Slide Content */
+/* Slide Content - NexBank: Left-aligned asymmetric */
 .hero-slide__content {
   position: relative;
   z-index: 3;
-  max-width: 900px;
-  text-align: center;
+  max-width: 600px; /* NexBank: narrower content block */
+  text-align: left; /* NexBank: left-aligned text */
   color: #ffffff;
+  /* Position on left side, creating 80% white space on right */
+  margin-right: auto;
+  margin-left: 0;
 }
 
 .hero-slide__category {
@@ -115,7 +63,7 @@
   font-weight: 300;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md, 28px); /* NexBank spacing system */
   color: rgba(255, 255, 255, 0.7);
 }
 
@@ -123,8 +71,8 @@
   font-family: 'Suisse Intl', sans-serif;
   font-size: clamp(32px, 5vw, 72px);
   font-weight: 100;
-  line-height: 1.2;
-  margin: 0 0 30px 0;
+  line-height: 1.15; /* NexBank: tighter heading spacing */
+  margin: 0 0 var(--spacing-lg, 42px) 0; /* NexBank spacing system */
   letter-spacing: -0.02em;
 }
 
@@ -135,9 +83,10 @@
   line-height: 1.6;
   margin: 0 0 40px 0;
   color: rgba(255, 255, 255, 0.9);
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 600px; /* NexBank: match content width */
+  /* Removed centering - left-aligned */
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .hero-slide__cta {
@@ -178,68 +127,7 @@
   z-index: 3;
 }
 
-/* Navigation Controls */
-.hero-carousel__controls {
-  position: absolute;
-  bottom: 60px;
-  left: var(--spacing-vw-desktop, 7.15vw);
-  display: flex;
-  gap: 20px;
-  z-index: 4;
-}
-
-.hero-carousel__arrow {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(10px);
-}
-
-.hero-carousel__arrow:hover {
-  background-color: rgba(21, 67, 114, 0.5);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: scale(1.1);
-}
-
-/* Dot Navigation */
-.hero-carousel__dots {
-  position: absolute;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  z-index: 4;
-}
-
-.hero-carousel__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
-}
-
-.hero-carousel__dot.is-active {
-  width: 30px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
-.hero-carousel__dot:hover {
-  background-color: rgba(255, 255, 255, 0.6);
-}
+/* Old navigation removed - now using CarouselNavigation and BottomTabNavigation components */
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {

@@ -1,0 +1,29 @@
+{
+  "body": {
+    "background": "rgb(26, 27, 28) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgb(26, 27, 28)",
+    "backgroundImage": "none",
+    "fontSize": "15px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(124, 124, 125)",
+    "padding": "0px",
+    "margin": "0px",
+    "position": "static",
+    "zIndex": "auto"
+  },
+  "header": null,
+  "hero": null,
+  "navigation": {
+    "background": "rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+    "backgroundColor": "rgba(0, 0, 0, 0)",
+    "backgroundImage": "none",
+    "fontSize": "15px",
+    "fontFamily": "suisseintl, Helvetica, Arial, sans-serif",
+    "color": "rgb(255, 255, 255)",
+    "padding": "0px",
+    "margin": "0px",
+    "position": "fixed",
+    "zIndex": "16"
+  },
+  "carousel": null
+}

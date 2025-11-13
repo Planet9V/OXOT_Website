@@ -1,0 +1,27 @@
+.three-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+  background-color: #0f0f0f;
+}
+
+/* Performance optimizations */
+.three-background {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+
+/* Smooth transitions */
+@media (prefers-reduced-motion: reduce) {
+  .three-background {
+    animation: none;
+    transition: none;
+  }
+}

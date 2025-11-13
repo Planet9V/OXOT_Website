@@ -1,0 +1,547 @@
+/**
+ * MenuSlideshow Global Styles
+ * File: /src/components/MenuSlideshow.css
+ * Created: 2025-11-13
+ * Version: 1.0.0
+ * Purpose: Reusable CSS for all menu sections (Institutional, Commercial, Mortgage)
+ * Status: ACTIVE
+ */
+
+/* =====================================
+   SLIDESHOW CONTAINER
+   ===================================== */
+
+.menu-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu-slideshow__controls {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  z-index: 10001;
+}
+
+.menu-slideshow__close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  width: 48px;
+  height: 48px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  background: transparent;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10001;
+}
+
+.menu-slideshow__close:hover {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+/* =====================================
+   SLIDE BASE STYLES (BEM)
+   ===================================== */
+
+.menu-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s cubic-bezier(0.25, 0.1, 0.25, 1),
+              visibility 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
+  padding: 80px;
+}
+
+.menu-slide--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-slide__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =====================================
+   SLIDE TYPE MODIFIERS
+   ===================================== */
+
+/* Slide 1: Title Screen */
+.menu-slide--title {
+  background: #000000;
+  text-align: center;
+}
+
+.menu-slide--title .menu-slide__title {
+  font-size: 56px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Slide 2: Content/Description */
+.menu-slide--content {
+  background: #000000;
+}
+
+.menu-slide--content .menu-slide__description {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu-slide--content .menu-slide__description p {
+  font-size: 24px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) 0.2s backwards;
+}
+
+/* Slide 3: Services List */
+.menu-slide--services {
+  background: #000000;
+  align-items: flex-start;
+  padding-top: 120px;
+}
+
+.menu-slide__services {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.menu-slide__services--scrollable {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  padding-right: 20px;
+}
+
+/* Custom scrollbar for services list */
+.menu-slide__services--scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+
+.menu-slide__services--scrollable::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+}
+
+.menu-slide__services--scrollable::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.menu-slide__services--scrollable::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* =====================================
+   ANIMATED BACKGROUND (Slide 1)
+   ===================================== */
+
+.animated-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.animated-background__stripe {
+  position: absolute;
+  width: 200%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    transparent 100%
+  );
+  transform: rotate(-45deg);
+  animation: slideStripe 3s linear infinite;
+}
+
+.animated-background__stripe:nth-child(1) {
+  top: 20%;
+  animation-delay: 0s;
+}
+
+.animated-background__stripe:nth-child(2) {
+  top: 40%;
+  animation-delay: 0.5s;
+}
+
+.animated-background__stripe:nth-child(3) {
+  top: 60%;
+  animation-delay: 1s;
+}
+
+.animated-background__stripe:nth-child(4) {
+  top: 80%;
+  animation-delay: 1.5s;
+}
+
+@keyframes slideStripe {
+  0% {
+    transform: translateX(-100%) rotate(-45deg);
+  }
+  100% {
+    transform: translateX(100%) rotate(-45deg);
+  }
+}
+
+/* =====================================
+   GEOMETRIC BACKGROUND (Slide 2)
+   ===================================== */
+
+.geometric-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.geometric-background__shape {
+  position: absolute;
+  opacity: 0.1;
+}
+
+.geometric-background__shape--circle {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.geometric-background__shape--circle:nth-child(1) {
+  top: 10%;
+  left: 10%;
+}
+
+.geometric-background__shape--circle:nth-child(4) {
+  bottom: 10%;
+  right: 10%;
+  width: 200px;
+  height: 200px;
+}
+
+.geometric-background__shape--triangle {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 260px solid white;
+  top: 50%;
+  right: 15%;
+  transform: translateY(-50%);
+}
+
+.geometric-background__shape--line {
+  width: 400px;
+  height: 2px;
+  background: white;
+  bottom: 20%;
+  left: 5%;
+  transform: rotate(-30deg);
+}
+
+/* =====================================
+   SERVICE ITEMS
+   ===================================== */
+
+.service-item {
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: cascadeIn 0.5s cubic-bezier(0.76, 0, 0.04, 1) forwards;
+}
+
+.service-item:hover {
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-4px);
+}
+
+@keyframes cascadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-item__header {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.service-item__number {
+  font-size: 16px;
+  font-weight: 600;
+  color: #999999;
+  letter-spacing: 0.1em;
+}
+
+.service-item__name {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.service-item__description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  margin: 12px 0 16px 0;
+}
+
+.service-item__features {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.service-item__feature {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #cccccc;
+  padding-left: 24px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.service-item__feature::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: #999999;
+}
+
+.service-item__cta {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.service-item__cta--primary {
+  background: #ffffff;
+  color: #000000;
+}
+
+.service-item__cta--primary:hover {
+  background: #cccccc;
+  transform: translateY(-2px);
+}
+
+.service-item__cta--secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.service-item__cta--secondary:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
+/* =====================================
+   NAVIGATION CONTROLS
+   ===================================== */
+
+.circ-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.circ-button:hover:not(:disabled) {
+  border-color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+.circ-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.circ-button__icon {
+  position: relative;
+  z-index: 2;
+}
+
+/* =====================================
+   PAGINATION
+   ===================================== */
+
+.menu-pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.menu-pagination__text {
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.menu-pagination__dots {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-pagination__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.menu-pagination__dot--active {
+  background: white;
+  transform: scale(1.5);
+}
+
+.menu-pagination__dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* =====================================
+   ANIMATIONS
+   ===================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 768px) {
+  .menu-slide {
+    padding: 40px 24px;
+  }
+
+  .menu-slide--title .menu-slide__title {
+    font-size: 36px;
+  }
+
+  .menu-slide--content .menu-slide__description p {
+    font-size: 18px;
+  }
+
+  .menu-slideshow__controls {
+    right: 20px;
+  }
+
+  .menu-slideshow__close {
+    top: 20px;
+    right: 20px;
+  }
+
+  .service-item {
+    padding: 24px;
+  }
+
+  .service-item__name {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-slide--title .menu-slide__title {
+    font-size: 28px;
+  }
+
+  .menu-slide--content .menu-slide__description p {
+    font-size: 16px;
+  }
+
+  .service-item__name {
+    font-size: 18px;
+  }
+
+  .service-item__description {
+    font-size: 14px;
+  }
+}
