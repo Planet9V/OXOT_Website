@@ -1,0 +1,259 @@
+/**
+ * NexBank Complete CSS System
+ * Based on exact analysis from nexbank.com
+ * All colors, spacing, and timings match exactly
+ */
+
+/* ===================================
+   1. COLOR PALETTE - COMPLETE
+   =================================== */
+
+:root {
+  /* Brand Colors */
+  --color-brand-blue: #154372;
+  --color-brand-red: #c10230;
+
+  /* Background Colors */
+  --color-bg-dark: #1a1b1c;
+  --color-bg-black: #1b1b1b;
+  --color-bg-white: #fff;
+  --color-bg-light: #f4f4f4;
+
+  /* Text Colors */
+  --color-text-primary: #3a3b3b;
+  --color-text-body-dark: #7c7c7d;
+  --color-text-secondary: #a1a1a1;
+  --color-text-disclaimer: #b1b1b1;
+  --color-text-muted: #8c8c8c;
+  --color-text-footer: #636363;
+
+  /* Neutral Grays - Full Spectrum */
+  --color-gray-000: #000;
+  --color-gray-060: #060606;
+  --color-gray-121: #121212;
+  --color-gray-161: #161718;
+  --color-gray-212: #212223;
+  --color-gray-232: #232426;
+  --color-gray-252: #252525;
+  --color-gray-353: #353535;
+  --color-gray-3c3: #3c3d3e;
+  --color-gray-3d3: #3d3e3e;
+  --color-gray-404: #404141;
+  --color-gray-484: #484949;
+  --color-gray-535: #535455;
+  --color-gray-555: #555;
+  --color-gray-666: #666;
+  --color-gray-676: #676767;
+  --color-gray-737: #737373;
+  --color-gray-898: #898989;
+  --color-gray-959: #959595;
+  --color-gray-9c9: #9c9c9c;
+  --color-gray-bfb: #bfbfbf;
+  --color-gray-ccc: #ccc;
+  --color-gray-d9d: #d9d9d9;
+  --color-gray-ebe: #ebebeb;
+
+  /* Alpha Values */
+  --color-nav-overlay: rgba(26, 27, 28, 0.95);
+  --color-button-hover: hsla(0, 0%, 100%, 0.7);
+  --color-form-border: hsla(0, 0%, 63.1%, 0.5);
+
+  /* ===================================
+     2. TYPOGRAPHY SYSTEM
+     =================================== */
+
+  /* Font Family */
+  --font-family-primary: suisseintl, Helvetica, Arial, sans-serif;
+
+  /* Base Typography */
+  --font-size-base: 15px;
+  --line-height-base: 2em;
+
+  /* Navigation Typography */
+  --font-size-nav-mobile: 24px;
+  --line-height-nav-mobile: 2.92em;
+  --font-size-nav-desktop: 20px;
+  --line-height-nav-desktop: 2.63em;
+
+  /* ===================================
+     3. LAYOUT SYSTEM (Viewport-based)
+     =================================== */
+
+  /* Mobile (< 600px) */
+  --spacing-mobile-side: 11.11vw; /* ~40px at 360px */
+  --logo-top-mobile: 42px;
+  --nav-toggle-top-mobile: 38px;
+
+  /* Desktop (>= 600px) */
+  --spacing-desktop-side: 7.15vw; /* ~100px at 1400px */
+  --logo-top-desktop: 74px;
+  --nav-toggle-top-desktop: 70px;
+
+  /* ===================================
+     4. ANIMATION TIMING FUNCTIONS
+     =================================== */
+
+  /* Custom Bezier Curves */
+  --ease-logo-transition: cubic-bezier(0.43, 0.195, 0.02, 1);
+  --ease-text-animation: cubic-bezier(0.43, 0, 0.06, 1);
+  --ease-logo-hover: cubic-bezier(0.76, 0, 0.04, 1);
+  --ease-form-interaction: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  /* Animation Durations */
+  --duration-logo-colored: 0.8s;
+  --duration-logo-text: 0.9s;
+  --duration-logo-elements: 1s;
+  --duration-nav-overlay: 1.5s;
+  --duration-anchor-link: 1.3s;
+  --duration-button-hover: 0.3s;
+  --duration-video-fade: 0.6s;
+
+  /* Animation Delays */
+  --delay-logo-colored: 0.3s;
+  --delay-logo-text: 0.05s;
+  --delay-logo-hover: 0.2s;
+
+  /* ===================================
+     5. Z-INDEX SYSTEM
+     =================================== */
+
+  --z-index-base: 1;
+  --z-index-logo: 100;
+  --z-index-nav-toggle: 100;
+  --z-index-nav: 90;
+  --z-index-loading: 200;
+  --z-index-ajax-loading: 200;
+
+  /* ===================================
+     6. RESPONSIVE BREAKPOINTS
+     =================================== */
+
+  --breakpoint-small: 600px;
+  --breakpoint-medium: 1200px;
+  --breakpoint-large: 1440px;
+  --breakpoint-mobile-portrait: 568px;
+
+  /* ===================================
+     7. SMOOTH SCROLL SETTINGS
+     =================================== */
+
+  --scroll-ease: 0.08; /* 8% interpolation */
+
+  /* ===================================
+     8. COMPONENT-SPECIFIC VARIABLES
+     =================================== */
+
+  /* Circular Buttons */
+  --button-size: 60px;
+  --button-border-width: 2px;
+  --button-border-color: var(--color-gray-666);
+  --button-hover-scale: 0.93;
+
+  /* SVG Stroke Animation */
+  --stroke-dasharray: 47;
+  --stroke-dashoffset-initial: 47;
+  --stroke-dashoffset-final: 0;
+  --stroke-width-thin: 0.5;
+  --stroke-width-bold: 5.5;
+}
+
+/* ===================================
+   BASE STYLES
+   =================================== */
+
+body {
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* Dark page backgrounds */
+body.page-id-home,
+body.page-id-about,
+body.page-id-contact,
+body.page-id-service {
+  color: var(--color-text-body-dark);
+  background-color: var(--color-bg-dark);
+}
+
+/* ===================================
+   SMOOTH SCROLL SYSTEM
+   =================================== */
+
+body.js-scroll-container {
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+.js-scroll-content {
+  /* Transform applied via JavaScript */
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* ===================================
+   HARDWARE ACCELERATION
+   =================================== */
+
+.logo__inner,
+.logo__inner svg,
+.nav-toggle__line,
+.smooth-scroll-content {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   =================================== */
+
+/* Small devices: 600px */
+@media screen and (min-width: 600px) {
+  :root {
+    --font-size-nav: var(--font-size-nav-desktop);
+    --line-height-nav: var(--line-height-nav-desktop);
+  }
+}
+
+/* Medium devices: 1200px */
+@media screen and (max-width: 1200px) {
+  /* Tablet adjustments */
+}
+
+/* Mobile portrait: 568px */
+@media screen and (max-width: 568px) {
+  /* Mobile portrait adjustments */
+}
+
+@media screen and (max-height: 568px) {
+  /* Landscape adjustments */
+}
+
+/* Large devices: 1440px */
+@media screen and (min-width: 1440px) {
+  /* Large screen optimizations */
+}
+
+/* ===================================
+   FOCUS MANAGEMENT
+   =================================== */
+
+/* Remove outlines for mouse users only */
+.js.no-focus button:focus,
+.js.no-focus a:focus {
+  outline: none;
+}
+
+/* Maintain focus for keyboard users */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 2px;
+}

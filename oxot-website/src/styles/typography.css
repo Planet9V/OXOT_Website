@@ -1,0 +1,234 @@
+/**
+ * NexBank Typography System
+ * Suisse Intl Font Family with fallbacks
+ */
+
+/* ===================================
+   FONT FACE DECLARATIONS
+   =================================== */
+
+/* Suisse Intl - Thin (Weight 100) */
+@font-face {
+  font-family: suisseintl;
+  src: url('/assets/fonts/suisseintl-thin.woff2') format('woff2'),
+       url('/assets/fonts/suisseintl-thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Suisse Intl - Light (Weight 300) */
+@font-face {
+  font-family: suisseintl;
+  src: url('/assets/fonts/suisseintl-light.woff2') format('woff2'),
+       url('/assets/fonts/suisseintl-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Suisse Intl - Regular (Weight 400) */
+@font-face {
+  font-family: suisseintl;
+  src: url('/assets/fonts/suisseintl-regular.woff2') format('woff2'),
+       url('/assets/fonts/suisseintl-regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Suisse Intl - Medium (Weight 500) */
+@font-face {
+  font-family: suisseintl;
+  src: url('/assets/fonts/suisseintl-medium.woff2') format('woff2'),
+       url('/assets/fonts/suisseintl-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===================================
+   FALLBACK FONT SYSTEM
+   =================================== */
+
+/* For browsers without Suisse Intl */
+body {
+  font-family: suisseintl, Helvetica, Arial, sans-serif;
+}
+
+/* ===================================
+   TYPOGRAPHY UTILITIES
+   =================================== */
+
+.text-thin {
+  font-weight: 100;
+}
+
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+/* ===================================
+   HEADING STYLES
+   =================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: suisseintl, Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 1em 0;
+}
+
+/* On dark backgrounds */
+.dark-bg h1,
+.dark-bg h2,
+.dark-bg h3,
+.dark-bg h4,
+.dark-bg h5,
+.dark-bg h6 {
+  color: var(--color-bg-white);
+}
+
+/* On light backgrounds */
+.light-bg h1,
+.light-bg h2,
+.light-bg h3,
+.light-bg h4,
+.light-bg h5,
+.light-bg h6 {
+  color: var(--color-text-primary);
+}
+
+/* ===================================
+   BODY TEXT STYLES
+   =================================== */
+
+p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  margin: 0 0 1em 0;
+}
+
+/* Dark background body text */
+.dark-bg p {
+  color: var(--color-text-body-dark);
+}
+
+/* Light background body text */
+.light-bg p {
+  color: var(--color-text-primary);
+}
+
+/* ===================================
+   SECONDARY TEXT STYLES
+   =================================== */
+
+.text-secondary {
+  color: var(--color-text-secondary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+.text-disclaimer {
+  color: var(--color-text-disclaimer);
+  font-size: 13px;
+}
+
+/* ===================================
+   NAVIGATION TYPOGRAPHY
+   =================================== */
+
+.nav__item {
+  font-size: var(--font-size-nav-mobile);
+  line-height: var(--line-height-nav-mobile);
+  font-weight: 300;
+}
+
+@media screen and (min-width: 600px) {
+  .nav__item {
+    font-size: var(--font-size-nav-desktop);
+    line-height: var(--line-height-nav-desktop);
+  }
+}
+
+/* ===================================
+   LINK STYLES
+   =================================== */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--duration-button-hover);
+}
+
+/* Light background links */
+.light-bg a:hover {
+  color: var(--color-gray-000);
+}
+
+/* Dark background links */
+.dark-bg a:hover {
+  color: var(--color-bg-white);
+}
+
+/* Underlined CTA links */
+.underlined-cta {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.underlined-cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transition: transform var(--duration-button-hover);
+  transform-origin: left;
+}
+
+.underlined-cta:hover::after {
+  transform: scaleX(0);
+}
+
+/* ===================================
+   RESPONSIVE TYPOGRAPHY
+   =================================== */
+
+/* Tablet adjustments */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Mobile adjustments */
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 15px;
+  }
+
+  .nav__item {
+    font-size: 24px;
+  }
+}
+
+/* Large screen enhancements */
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 16px;
+  }
+}

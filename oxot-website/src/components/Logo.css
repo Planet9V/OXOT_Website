@@ -1,0 +1,174 @@
+/* Logo Base Styles */
+.logo {
+  position: fixed;
+  top: 42px;
+  left: 11.11vw;
+  z-index: 1000;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (min-width: 600px) {
+  .logo {
+    top: 74px;
+    left: 7.15vw;
+  }
+}
+
+.logo__inner {
+  position: relative;
+  width: 200px;
+  height: 40px;
+  margin-top: -11.5px;
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* SVG Text Logo */
+.logo__inner .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.9s cubic-bezier(0.43, 0, 0.06, 1) 0.05s;
+}
+
+/* Colored Icon Elements */
+.logo__inner .colored {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  opacity: 1;
+  transition: all 0.8s cubic-bezier(0.43, 0.195, 0.02, 1) 0.3s;
+}
+
+/* Animated Stripes - Initial State */
+.logo__inner .thin.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  transform: translate(-10%, -2%) translateZ(0);
+}
+
+.logo__inner .thin.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  transform: translate(10%, 2%) translateZ(0);
+}
+
+.logo__inner .bold.left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 34px;
+  transform: translate(-10%, 7%) translateZ(0);
+}
+
+.logo__inner .bold.right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  transform: translate(10%, -7%) translateZ(0);
+}
+
+/* SVG Stroke Animation Setup */
+.logo__inner .thin-stripe,
+.logo__inner .bold-stripe {
+  stroke: #fff;
+  fill: none;
+  stroke-dasharray: 47;
+  stroke-dashoffset: 47;
+  transition: all 1s cubic-bezier(0.76, 0, 0.04, 1);
+}
+
+.logo__inner .thin-stripe {
+  stroke-width: 0.5;
+}
+
+.logo__inner .bold-stripe {
+  stroke-width: 5.5;
+}
+
+/* Corner Bars */
+.logo__inner .bar {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  opacity: 0;
+  transition: all 1s cubic-bezier(0.76, 0, 0.04, 1);
+}
+
+.logo__inner .bar.left.top {
+  top: 0;
+  left: 0;
+}
+
+.logo__inner .bar.left.bottom {
+  bottom: 0;
+  left: 0;
+}
+
+.logo__inner .bar.right.top {
+  top: 0;
+  right: 0;
+}
+
+.logo__inner .bar.right.bottom {
+  bottom: 0;
+  right: 0;
+}
+
+.logo__inner .bar path {
+  stroke-dasharray: 47;
+  stroke-dashoffset: 47;
+  transition: all 1s cubic-bezier(0.76, 0, 0.04, 1);
+}
+
+/* Hover State */
+.logo__inner:hover .thin.left,
+.logo__inner:hover .thin.right,
+.logo__inner:hover .bold.left,
+.logo__inner:hover .bold.right {
+  transform: translateZ(0) !important;
+  transition: all 1s cubic-bezier(0.76, 0, 0.04, 1) 0.2s;
+}
+
+.logo__inner:hover .colored {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.43, 0.195, 0.02, 1);
+}
+
+.logo__inner:hover .text {
+  transform: translateX(10%) translateZ(0);
+}
+
+.logo__inner:hover .thin-stripe,
+.logo__inner:hover .bold-stripe {
+  stroke-dashoffset: 0 !important;
+}
+
+.logo__inner:hover .bar {
+  opacity: 1;
+}
+
+.logo__inner:hover .bar path {
+  stroke-dashoffset: 0 !important;
+}
+
+/* Hardware Acceleration */
+.logo__inner,
+.logo__inner svg {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}

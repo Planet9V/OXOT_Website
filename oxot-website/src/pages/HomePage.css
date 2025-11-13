@@ -1,102 +1,381 @@
-.hero-section {
-  position: relative;
-  height: 100vh;
+/* HomePage Container */
+.home-page {
+  width: 100%;
+  background-color: #0a0a0a;
+  color: #ffffff;
+}
+
+/* Trust Banner */
+.trust-banner {
+  background-color: #154372;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.trust-banner__content {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.trust-banner__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  font-size: 12px;
+}
+
+/* Services Section */
+.services-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1b1c 100%);
+}
+
+.services-section__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
+}
+
+.services-section__header {
   text-align: center;
+  margin-bottom: 80px;
+}
+
+.services-section__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.02em;
+}
+
+.services-section__subtitle {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.service-card {
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.1) 0%, rgba(193, 2, 48, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  backdrop-filter: blur(10px);
+  position: relative;
   overflow: hidden;
 }
 
-.hero-video {
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.2) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(21, 67, 114, 0.5);
+  box-shadow: 0 20px 40px rgba(21, 67, 114, 0.2);
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+.service-card__icon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-card__icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.service-card__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+}
+
+.service-card__description {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 24px 0;
+}
+
+.service-card__cta {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #154372;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.service-card__cta:hover {
+  color: #c10230;
+  transform: translateX(5px);
+}
+
+/* Value Section */
+.value-section {
+  padding: 120px 0;
+  background: #0a0a0a;
+  position: relative;
+  overflow: hidden;
+}
+
+.value-section::before {
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(21, 67, 114, 0.15) 0%, transparent 70%);
   transform: translate(-50%, -50%);
-  z-index: -1;
+  pointer-events: none;
 }
 
-.hero-content {
+.value-section__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
+  position: relative;
   z-index: 1;
 }
 
-.hero-content h1 {
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  animation: fadeInDown 1s ease;
-}
-
-.hero-content p {
-  font-size: 1.5rem;
-  animation: fadeInUp 1s ease;
-}
-
-.mission-section, .solutions-section {
-  padding: 4rem 2rem;
+.value-section__content {
   text-align: center;
 }
 
-.solutions-grid {
+.value-section__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.value-section__text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+.value-section__stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 60px;
+  margin-top: 80px;
 }
 
-.solution-card {
-  background-color: var(--secondary-color);
-  padding: 2rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.value-stat {
+  text-align: center;
 }
 
-.solution-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.value-stat__number {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(48px, 6vw, 72px);
+  font-weight: 100;
+  color: #154372;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
 
-.solution-card {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+.value-stat__label {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.solution-card.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+/* Industries Section */
+.industries-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1b1c 100%);
 }
 
-.solution-card:nth-child(2) {
-  transition-delay: 0.1s;
-}
-.solution-card:nth-child(3) {
-  transition-delay: 0.2s;
-}
-.solution-card:nth-child(4) {
-  transition-delay: 0.3s;
+.industries-section__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
+.industries-section__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 0 0 60px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.industry-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 40px 30px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.industry-card:hover {
+  background: rgba(21, 67, 114, 0.1);
+  border-color: rgba(21, 67, 114, 0.3);
+  transform: translateY(-5px);
+}
+
+.industry-card h3 {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.industry-card p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .services-section,
+  .value-section,
+  .industries-section {
+    padding: 80px 0;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .value-section__stats {
+    gap: 40px;
   }
 }
 
+@media screen and (max-width: 768px) {
+  .services-section__container,
+  .value-section__container,
+  .industries-section__container {
+    padding: 0 var(--spacing-vw-mobile, 11.11vw);
+  }
+
+  .services-section,
+  .value-section,
+  .industries-section {
+    padding: 60px 0;
+  }
+
+  .services-section__header {
+    margin-bottom: 50px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .value-section__stats {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .industries-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .trust-banner__content {
+    font-size: 12px;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Hardware Acceleration */
+.service-card,
+.industry-card,
+.value-section__title {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }

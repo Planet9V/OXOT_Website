@@ -1,13 +1,56 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OXOT</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html class="no-js desktop no-focus" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OXOT - Operational Technology Security</title>
+
+  <!-- Preload critical assets -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Meta tags -->
+  <meta name="description" content="OXOT provides enterprise-grade operational technology security solutions">
+  <meta name="theme-color" content="#1a1b1c">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Organization",
+    "name": "OXOT",
+    "url": "https://www.oxot.com/",
+    "description": "Operational Technology Security Solutions"
+  }
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="main-loading" style="display: none;">
+    <div class="main-loading__text">
+      <div class="main-loading__number">
+        <span class="main-loading__digit"></span>
+        <span class="main-loading__digit">0</span>
+        <span class="main-loading__digit">0</span>
+      </div>
+      <div class="main-loading__number">
+        <span class="main-loading__digit"></span>
+        <span class="main-loading__digit">0</span>
+        <span class="main-loading__digit">0</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Transition Overlay -->
+  <div class="ajax-loading" style="display: none;">
+    <div class="ajax-loading__background"></div>
+    <div class="ajax-loading__text"></div>
+  </div>
+
+  <!-- React Root -->
+  <div id="root"></div>
+
+  <script type="module" src="/src/main.jsx"></script>
+</body>
 </html>

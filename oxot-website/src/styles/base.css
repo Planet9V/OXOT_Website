@@ -1,0 +1,326 @@
+/**
+ * Base Styles - NexBank Foundation
+ * Core CSS reset, typography, and layout foundation
+ */
+
+/* ===================================
+   CSS CUSTOM PROPERTIES (VARIABLES)
+   =================================== */
+
+:root {
+  /* Brand Colors */
+  --color-brand-blue: #154372;
+  --color-brand-red: #c10230;
+
+  /* Background Colors */
+  --color-bg-dark: #1a1b1c;
+  --color-bg-black: #1b1b1b;
+  --color-bg-white: #fff;
+  --color-bg-light: #f4f4f4;
+
+  /* Text Colors */
+  --color-text-primary: #3a3b3b;
+  --color-text-body-dark: #7c7c7d;
+  --color-text-secondary: #a1a1a1;
+  --color-text-light: #b1b1b1;
+  --color-text-muted: #8c8c8c;
+
+  /* Neutral Grays */
+  --color-gray-100: #060606;
+  --color-gray-200: #161718;
+  --color-gray-300: #232426;
+  --color-gray-400: #353535;
+  --color-gray-500: #555;
+  --color-gray-600: #666;
+  --color-gray-700: #737373;
+  --color-gray-800: #959595;
+  --color-gray-900: #ccc;
+
+  /* Alpha Values */
+  --color-nav-overlay: rgba(26, 27, 28, 0.95);
+  --color-button-hover: hsla(0, 0%, 100%, 0.7);
+  --color-border-alpha: hsla(0, 0%, 63.1%, 0.5);
+
+  /* Spacing (viewport-based) */
+  --spacing-mobile-side: 11.11vw;
+  --spacing-desktop-side: 7.15vw;
+
+  /* Logo positioning */
+  --logo-top-mobile: 42px;
+  --logo-top-desktop: 74px;
+
+  /* Nav toggle positioning */
+  --nav-toggle-top-mobile: 38px;
+  --nav-toggle-top-desktop: 70px;
+
+  /* Z-index scale */
+  --z-index-base: 1;
+  --z-index-nav: 999;
+  --z-index-logo: 1000;
+  --z-index-nav-toggle: 1001;
+  --z-index-ajax-loading: 9998;
+  --z-index-loading: 9999;
+
+  /* Animation timing */
+  --duration-fast: 0.3s;
+  --duration-medium: 0.8s;
+  --duration-slow: 1.6s;
+
+  /* Easing functions */
+  --ease-logo: cubic-bezier(0.43, 0.195, 0.02, 1);
+  --ease-text: cubic-bezier(0.43, 0, 0.06, 1);
+  --ease-hover: cubic-bezier(0.76, 0, 0.04, 1);
+  --ease-form: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-power2: cubic-bezier(0.77, 0, 0.175, 1);
+
+  /* Component sizes */
+  --button-size: 60px;
+  --logo-width: 200px;
+  --logo-height: 40px;
+}
+
+/* ===================================
+   RESET & NORMALIZATION
+   =================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+html.no-js {
+  /* JavaScript detection class */
+}
+
+html.js {
+  /* JavaScript enabled */
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  line-height: 2em;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-white);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Dark pages */
+body.page-id-home,
+body.page-id-about,
+body.page-id-contact,
+body.page-id-service {
+  color: var(--color-text-body-dark);
+  background-color: var(--color-bg-dark);
+}
+
+/* ===================================
+   TYPOGRAPHY BASE
+   =================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--duration-fast);
+}
+
+a:hover {
+  color: var(--color-text-secondary);
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Focus styles - only show for keyboard users */
+.js.no-focus button:focus,
+.js.no-focus a:focus {
+  outline: none;
+}
+
+/* ===================================
+   SMOOTH SCROLL CONTAINER
+   =================================== */
+
+.js-scroll-container {
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+.js-scroll-content {
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ===================================
+   LAYOUT UTILITIES
+   =================================== */
+
+.container {
+  width: 100%;
+  padding-left: var(--spacing-mobile-side);
+  padding-right: var(--spacing-mobile-side);
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    padding-left: var(--spacing-desktop-side);
+    padding-right: var(--spacing-desktop-side);
+  }
+}
+
+/* ===================================
+   PAGE STRUCTURE
+   =================================== */
+
+.page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section {
+  position: relative;
+  width: 100%;
+  padding: 60px 0;
+}
+
+@media screen and (min-width: 600px) {
+  .section {
+    padding: 100px 0;
+  }
+}
+
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
+
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===================================
+   RESPONSIVE BREAKPOINTS
+   =================================== */
+
+/* Small devices: 600px */
+@media screen and (min-width: 600px) {
+  /* Styles applied at 600px and above */
+}
+
+/* Medium devices: 1200px */
+@media screen and (max-width: 1200px) {
+  /* Styles applied below 1200px */
+}
+
+/* Mobile portrait: 568px */
+@media screen and (max-width: 568px) {
+  /* Styles applied below 568px */
+}
+
+@media screen and (max-height: 568px) {
+  /* Styles applied for short viewports */
+}
+
+/* Large devices: 1440px */
+@media screen and (min-width: 1440px) {
+  /* Styles applied at 1440px and above */
+}
+
+/* ===================================
+   TOUCH DETECTION
+   =================================== */
+
+/* No outline for mouse users */
+.no-touch .circ-button:hover .circ-button__border {
+  transform: scale(0.93);
+}
+
+/* Touch-specific styles */
+.touch .nav-toggle {
+  /* Touch-optimized tap targets */
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+  body {
+    background: white;
+    color: black;
+  }
+
+  .nav,
+  .nav-toggle,
+  .logo,
+  .main-loading,
+  .ajax-loading,
+  .home__nav {
+    display: none !important;
+  }
+
+  .page {
+    page-break-inside: avoid;
+  }
+}

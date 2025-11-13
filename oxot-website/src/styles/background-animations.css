@@ -1,0 +1,261 @@
+/**
+ * Background Animations - Alternative to Video Backgrounds
+ * CSS/WebGL-style animated backgrounds for modern web experience
+ */
+
+/* ===================================
+   ANIMATED GRADIENT BACKGROUNDS
+   =================================== */
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  33% {
+    transform: translateY(-20px) translateX(10px);
+  }
+  66% {
+    transform: translateY(10px) translateX(-10px);
+  }
+}
+
+/* ===================================
+   TECH GRID BACKGROUND
+   =================================== */
+
+.background-animated {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-dark) 0%,
+    var(--color-gray-200) 50%,
+    var(--color-bg-dark) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.background-animated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(21, 67, 114, 0.05) 25%, rgba(21, 67, 114, 0.05) 26%, transparent 27%, transparent 74%, rgba(21, 67, 114, 0.05) 75%, rgba(21, 67, 114, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(21, 67, 114, 0.05) 25%, rgba(21, 67, 114, 0.05) 26%, transparent 27%, transparent 74%, rgba(21, 67, 114, 0.05) 75%, rgba(21, 67, 114, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+  animation: float 20s ease-in-out infinite;
+}
+
+.background-animated::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(21, 67, 114, 0.2) 0%,
+    transparent 50%
+  ),
+  radial-gradient(
+    circle at 70% 70%,
+    rgba(193, 2, 48, 0.15) 0%,
+    transparent 50%
+  );
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+/* ===================================
+   PARTICLE EFFECT BACKGROUND
+   =================================== */
+
+.background-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg-dark);
+}
+
+.background-particles::before,
+.background-particles::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  animation: float 15s ease-in-out infinite;
+}
+
+.background-particles::before {
+  top: 20%;
+  left: 10%;
+  background: var(--color-brand-blue);
+  animation-delay: 0s;
+}
+
+.background-particles::after {
+  bottom: 20%;
+  right: 10%;
+  background: var(--color-brand-red);
+  animation-delay: 7s;
+}
+
+/* ===================================
+   MESH GRADIENT BACKGROUND
+   =================================== */
+
+.background-mesh {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(at 0% 0%, var(--color-brand-blue) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--color-brand-red) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--color-brand-blue) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, var(--color-gray-300) 0px, transparent 50%),
+    var(--color-bg-dark);
+  background-size: 400% 400%;
+  animation: gradientShift 20s ease infinite;
+}
+
+/* ===================================
+   CYBERSECURITY-THEMED BACKGROUND
+   =================================== */
+
+.background-cyber {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-bg-dark);
+  overflow: hidden;
+}
+
+.background-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(21, 67, 114, 0.03) 2px,
+      rgba(21, 67, 114, 0.03) 4px
+    );
+  animation: float 10s linear infinite;
+}
+
+.background-cyber::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle, rgba(21, 67, 114, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: float 30s linear infinite reverse;
+}
+
+/* ===================================
+   VIDEO BACKGROUND FALLBACK
+   =================================== */
+
+.video-background-fallback {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--color-bg-dark) 0%,
+    var(--color-gray-200) 25%,
+    var(--color-bg-dark) 50%,
+    var(--color-gray-300) 75%,
+    var(--color-bg-dark) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 25s ease infinite;
+}
+
+/* Overlay for better text readability */
+.video-background-fallback::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(26, 27, 28, 0.5);
+}
+
+/* ===================================
+   PERFORMANCE OPTIMIZATIONS
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .background-animated,
+  .background-animated::before,
+  .background-animated::after,
+  .background-particles::before,
+  .background-particles::after,
+  .background-mesh,
+  .background-cyber::before,
+  .background-cyber::after,
+  .video-background-fallback {
+    animation: none;
+  }
+}
+
+/* Disable animations on low-power devices */
+@media (max-width: 768px) {
+  .background-animated::before,
+  .background-particles::before,
+  .background-particles::after {
+    animation-duration: 25s;
+  }
+}

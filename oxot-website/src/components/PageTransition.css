@@ -1,0 +1,138 @@
+/* Page Transition Overlay */
+.ajax-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ajax-loading.is-active {
+  visibility: visible;
+  pointer-events: all;
+}
+
+.ajax-loading__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1b1c;
+  transform: translateY(100%);
+  animation: backgroundSlideIn 1.6s cubic-bezier(0.43, 0.195, 0.02, 1) forwards;
+}
+
+.ajax-loading.is-active .ajax-loading__background {
+  animation: backgroundSlideIn 1.6s cubic-bezier(0.43, 0.195, 0.02, 1) forwards,
+             backgroundSlideOut 1.6s cubic-bezier(0.43, 0.195, 0.02, 1) 1.7s forwards;
+}
+
+@keyframes backgroundSlideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes backgroundSlideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.ajax-loading__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 0.3em;
+  font-size: 48px;
+  font-weight: 300;
+  color: #fff;
+  letter-spacing: 0.02em;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .ajax-loading__text {
+    font-size: 32px;
+  }
+}
+
+.ajax-loading__word {
+  display: inline-block;
+  opacity: 0;
+  animation: wordSlideIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards,
+             wordSlideOut 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) 2s forwards;
+}
+
+@keyframes wordSlideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wordSlideOut {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+/* Alternative animation with rotation (like NexBank) */
+.ajax-loading__word.with-rotation {
+  animation: wordSlideInRotate 1s cubic-bezier(0.165, 0.84, 0.44, 1) forwards,
+             wordSlideOutRotate 1.3s cubic-bezier(0.165, 0.84, 0.44, 1) 2s forwards;
+}
+
+@keyframes wordSlideInRotate {
+  0% {
+    transform: translateY(100%) rotate(15deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes wordSlideOutRotate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100%) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Hardware acceleration */
+.ajax-loading__background,
+.ajax-loading__word {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
