@@ -51,15 +51,15 @@ const AEONCyberTwinPage = () => {
 
             <div className="force-card force-card--red">
               <div className="force-card__icon">⚔️</div>
-              <h3 className="force-card__title">Red Team Offense</h3>
-              <p className="force-card__subtitle">Autonomous Adversarial Emulation</p>
+              <h3 className="force-card__title">Agent Red - Autonomous Offensive Operations</h3>
+              <p className="force-card__subtitle">AI Agents with Full Framework Autonomy</p>
               <ul className="force-card__features">
-                <li>AI-driven penetration testing</li>
-                <li>Threat actor persona emulation</li>
-                <li>Goal-oriented autonomous agents</li>
-                <li>Custom exploit generation</li>
-                <li>Full-stack attack chains (IT & OT)</li>
-                <li>Continuous security validation</li>
+                <li>Autonomous Metasploit, BloodHound, Responder execution</li>
+                <li>Agent-to-Agent (A2A) protocol for coordinated attacks</li>
+                <li>Deploy and operate on compromised systems</li>
+                <li>Real-time intelligence from AEON knowledge base</li>
+                <li>OSINT-driven obscure attack path discovery</li>
+                <li>Threat actor persona emulation with authentic TTPs</li>
               </ul>
             </div>
           </div>
@@ -69,9 +69,9 @@ const AEONCyberTwinPage = () => {
       {/* Core Capabilities */}
       <div className="aeon-capabilities">
         <div className="aeon-container">
-          <h2 className="section-title">Unparalleled Intelligence Depth</h2>
+          <h2 className="section-title">Fully Operational Advanced Capabilities</h2>
           <p className="section-subtitle">
-            20+ hop graph traversal - far exceeding any competitive platform
+            Agent Red autonomously executes offensive frameworks with 20+ hop graph intelligence - production-ready today
           </p>
 
           <div className="capabilities-grid">
@@ -166,18 +166,61 @@ const AEONCyberTwinPage = () => {
 
             <div className="capability-card">
               <div className="capability-card__header">
-                <div className="capability-card__icon">🛠️</div>
-                <h3>Full Kali Toolkit Integration</h3>
+                <div className="capability-card__icon">🤖</div>
+                <h3>Agent Red - Autonomous Framework Execution</h3>
               </div>
               <p>
-                Complete integration with Kali Linux's penetration testing toolkit, enhanced with AI orchestration
-                for autonomous tool selection, execution, and result analysis.
+                Fully operational AI agents autonomously execute Metasploit, BloodHound, Responder, and other frameworks
+                in coordinated attacks. Agents communicate via A2A protocol, deploy onto compromised systems, and query
+                AEON's knowledge base for latest attack paths, exploits, and TTPs.
               </p>
               <ul className="capability-list">
-                <li>Automated tool selection</li>
-                <li>Context-aware execution</li>
-                <li>Multi-agent coordination</li>
-                <li>Custom exploit development</li>
+                <li>Autonomous Metasploit & BloodHound operations</li>
+                <li>Responder, Mimikatz, Empire framework control</li>
+                <li>Agent-to-Agent (A2A) coordination protocol</li>
+                <li>Deploy and persist on compromised systems</li>
+                <li>Live AEON intelligence integration</li>
+                <li>Multi-agent swarm tactics</li>
+              </ul>
+            </div>
+
+            <div className="capability-card">
+              <div className="capability-card__header">
+                <div className="capability-card__icon">🔍</div>
+                <h3>OSINT & Obscure Path Discovery</h3>
+              </div>
+              <p>
+                Integrated OSINT engine identifies specific equipment, personnel, technologies, and suppliers to
+                discover obscure attack paths into facilities. Maps vendor relationships, supply chains, contractor
+                access, and third-party dependencies for comprehensive red team exercises.
+              </p>
+              <ul className="capability-list">
+                <li>Equipment & technology fingerprinting</li>
+                <li>Personnel & organizational mapping</li>
+                <li>Supplier & vendor relationship analysis</li>
+                <li>Contractor and third-party access paths</li>
+                <li>Physical facility reconnaissance correlation</li>
+                <li>Social engineering vector identification</li>
+              </ul>
+            </div>
+
+            <div className="capability-card">
+              <div className="capability-card__header">
+                <div className="capability-card__icon">🛠️</div>
+                <h3>Live Attack Intelligence Knowledge Base</h3>
+              </div>
+              <p>
+                Agent Red queries AEON's continuously updated knowledge base for the latest attack paths, techniques,
+                vulnerabilities, exploits, and TTPs. Real-time intelligence ensures agents deploy current threats
+                relevant to your specific infrastructure and threat landscape.
+              </p>
+              <ul className="capability-list">
+                <li>Latest CVEs with active exploits</li>
+                <li>Current threat actor TTPs & campaigns</li>
+                <li>Sector-specific attack techniques</li>
+                <li>Zero-day and N-day exploit intelligence</li>
+                <li>Tool and framework updates</li>
+                <li>Adaptive attack strategy recommendations</li>
               </ul>
             </div>
           </div>
@@ -255,22 +298,27 @@ const AEONCyberTwinPage = () => {
               <h3>Knowledge Base</h3>
               <ul>
                 <li>SBOM Repository & Parser</li>
-                <li>CVE/Vulnerability Database</li>
-                <li>Exploit Intelligence (PoC & Active)</li>
-                <li>MITRE ATT&CK Framework</li>
-                <li>Threat Actor Profiles & TTPs</li>
+                <li>CVE/Vulnerability Database (Live Updates)</li>
+                <li>Exploit Intelligence (PoC & Active Exploits)</li>
+                <li>MITRE ATT&CK Framework Integration</li>
+                <li>Threat Actor Profiles & Current TTPs</li>
+                <li>OSINT Engine (Equipment, People, Suppliers)</li>
+                <li>Attack Path & Technique Database</li>
                 <li>Sector-Specific Architecture Models</li>
               </ul>
             </div>
 
             <div className="layer-card">
-              <h3>Execution Layer</h3>
+              <h3>Execution Layer - Agent Red</h3>
               <ul>
-                <li>Autonomous AI Agents</li>
-                <li>Kali Linux Toolkit Integration</li>
+                <li>Autonomous AI Agents (Fully Operational)</li>
+                <li>Agent-to-Agent (A2A) Coordination Protocol</li>
+                <li>Metasploit, BloodHound, Responder Autonomy</li>
+                <li>Deploy & Persist on Compromised Systems</li>
                 <li>Custom Exploit Generator</li>
                 <li>Multi-Environment Support (IT/OT)</li>
-                <li>Goal-Oriented Testing Framework</li>
+                <li>Live Intelligence Query from Knowledge Base</li>
+                <li>Goal-Oriented Red Team Framework</li>
               </ul>
             </div>
 
@@ -297,16 +345,18 @@ const AEONCyberTwinPage = () => {
             <div className="use-case-card">
               <h3>Energy Sector</h3>
               <p>
-                Map SCADA component vulnerabilities to known threat actor campaigns targeting power generation and
-                distribution systems. AI agents emulate APT groups to validate defenses.
+                OSINT engine identifies specific SCADA equipment vendors, contractor access points, and third-party
+                maintenance systems. Agent Red autonomously executes Metasploit against identified paths while
+                coordinating with multiple AI agents via A2A protocol to emulate APT campaigns.
               </p>
             </div>
 
             <div className="use-case-card">
               <h3>Manufacturing</h3>
               <p>
-                Predict ransomware attack vectors through production line systems. Test incident response procedures
-                with AI-driven scenario generation unique to your facility.
+                Discover obscure attack paths through PLC suppliers, integrator remote access, and vendor VPN
+                connections via OSINT. Agent Red deploys BloodHound and Responder on IT systems, then pivots
+                to industrial floor using latest exploits from AEON knowledge base.
               </p>
             </div>
 
