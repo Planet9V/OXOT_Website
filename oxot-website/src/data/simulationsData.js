@@ -133,7 +133,7 @@ export const simulationsData = [
     technologies: ['SCADA', 'IEC 62443', 'OT Security', 'Digital Twin'],
     difficulty: 'Intermediate',
     estimatedTime: '20-30 minutes',
-    embedUrl: 'YOUR_AI_STUDIO_EMBED_URL_HERE', // Replace with actual AI Studio URL
+    embedUrl: 'https://ai.studio/apps/drive/1kNI4JX-4tJipyklqmTXp1Un0rm-1ioCr',
     learningObjectives: [
       'Understand hydroelectric control systems',
       'Apply IEC 62443 security zones',
