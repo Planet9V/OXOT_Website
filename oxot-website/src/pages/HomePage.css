@@ -369,6 +369,573 @@
   }
 }
 
+/* Legal Moat / Attorney-Client Privilege Section */
+.legal-moat-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.15) 0%, rgba(10, 10, 10, 1) 100%);
+  border-top: 2px solid rgba(21, 67, 114, 0.3);
+  border-bottom: 2px solid rgba(21, 67, 114, 0.3);
+}
+
+.legal-moat__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
+}
+
+.legal-moat__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.3), rgba(193, 2, 48, 0.3));
+  border: 2px solid #154372;
+  padding: 12px 24px;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.legal-moat__badge-icon {
+  font-size: 24px;
+}
+
+.legal-moat__badge-text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00FFD1;
+}
+
+.legal-moat__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 200;
+  line-height: 1.1;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.legal-moat__subtitle {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 1000px;
+  margin: 0 0 60px 0;
+}
+
+.legal-moat__comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.legal-moat__column {
+  padding: 40px;
+  border-radius: 12px;
+  border: 2px solid;
+  position: relative;
+}
+
+.legal-moat__column--threat {
+  background: rgba(193, 2, 48, 0.05);
+  border-color: rgba(193, 2, 48, 0.3);
+}
+
+.legal-moat__column--protection {
+  background: rgba(21, 67, 114, 0.1);
+  border-color: rgba(21, 67, 114, 0.5);
+  box-shadow: 0 0 40px rgba(21, 67, 114, 0.3);
+}
+
+.legal-moat__column-title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legal-moat__icon {
+  font-size: 28px;
+}
+
+.legal-moat__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.legal-moat__list li {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.legal-moat__list li:last-child {
+  border-bottom: none;
+}
+
+.legal-moat__list li strong {
+  color: #00FFD1;
+  font-weight: 600;
+}
+
+.legal-moat__risk-badge {
+  background: rgba(193, 2, 48, 0.2);
+  border: 1px solid rgba(193, 2, 48, 0.5);
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #FF5555;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+}
+
+.legal-moat__protection-badge {
+  background: rgba(0, 255, 209, 0.1);
+  border: 1px solid rgba(0, 255, 209, 0.3);
+  padding: 15px 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #00FFD1;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+}
+
+.legal-moat__value-props {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.legal-moat__value-prop {
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.legal-moat__value-prop:hover {
+  background: rgba(21, 67, 114, 0.1);
+  border-color: rgba(21, 67, 114, 0.5);
+  transform: translateY(-5px);
+}
+
+.value-prop__icon {
+  font-size: 36px;
+  flex-shrink: 0;
+}
+
+.value-prop__content h4 {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 10px 0;
+  color: #ffffff;
+}
+
+.value-prop__content p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.legal-moat__cta-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(21, 67, 114, 0.1);
+  border: 2px solid rgba(21, 67, 114, 0.3);
+  border-radius: 12px;
+}
+
+.legal-moat__cta-text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 30px 0;
+  font-style: italic;
+}
+
+.legal-moat__cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.legal-moat__cta-primary,
+.legal-moat__cta-secondary {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.legal-moat__cta-primary {
+  background: linear-gradient(135deg, #154372, #0a4a7d);
+  color: #ffffff;
+  border: 2px solid #154372;
+}
+
+.legal-moat__cta-primary:hover {
+  background: linear-gradient(135deg, #1a5589, #0d5690);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(21, 67, 114, 0.5);
+}
+
+.legal-moat__cta-secondary {
+  background: transparent;
+  color: #00FFD1;
+  border: 2px solid rgba(0, 255, 209, 0.5);
+}
+
+.legal-moat__cta-secondary:hover {
+  background: rgba(0, 255, 209, 0.1);
+  border-color: #00FFD1;
+  transform: translateY(-2px);
+}
+
+/* Responsive: Legal Moat Section */
+@media (max-width: 968px) {
+  .legal-moat__comparison {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .legal-moat__value-props {
+    grid-template-columns: 1fr;
+  }
+
+  .legal-moat__cta-buttons {
+    flex-direction: column;
+  }
+
+  .legal-moat__cta-primary,
+  .legal-moat__cta-secondary {
+    width: 100%;
+  }
+}
+
+/* Customer Proof Section */
+.customer-proof-section {
+  padding: 100px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1b1c 50%, #0a0a0a 100%);
+}
+
+.customer-proof__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
+}
+
+.customer-proof__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.customer-proof__category {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #00FFD1;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.customer-proof__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
+
+.customer-proof__subtitle {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Customer Logos */
+.customer-logos {
+  margin-bottom: 80px;
+}
+
+.customer-logos__label {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+}
+
+.customer-logos__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.customer-logo-placeholder {
+  height: 120px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.customer-logo-placeholder:hover {
+  background: rgba(21, 67, 114, 0.1);
+  border-color: rgba(21, 67, 114, 0.3);
+  transform: translateY(-3px);
+}
+
+.industry-tag {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+}
+
+/* Customer Stats */
+.customer-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+  padding: 60px 40px;
+  background: rgba(21, 67, 114, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(21, 67, 114, 0.2);
+}
+
+.customer-stat {
+  text-align: center;
+}
+
+.customer-stat__value {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 48px;
+  font-weight: 100;
+  color: #00FFD1;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.customer-stat__label {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.4;
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.testimonial-card {
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.1) 0%, rgba(193, 2, 48, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(0, 255, 209, 0.3);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial-card__quote-icon {
+  font-size: 72px;
+  font-family: Georgia, serif;
+  color: rgba(0, 255, 209, 0.2);
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.testimonial-card__quote {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 30px 0;
+  font-style: italic;
+}
+
+.testimonial-card__attribution {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial-card__author {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+}
+
+.testimonial-card__company {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.testimonial-card__outcome {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 255, 209, 0.05);
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 3px solid #00FFD1;
+}
+
+.testimonial-card__outcome strong {
+  color: #00FFD1;
+  font-weight: 600;
+}
+
+/* Customer Proof CTA */
+.customer-proof__cta-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.1), rgba(193, 2, 48, 0.05));
+  border: 2px solid rgba(21, 67, 114, 0.3);
+  border-radius: 12px;
+}
+
+.customer-proof__cta-text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 30px 0;
+}
+
+.customer-proof__cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.customer-proof__cta-primary,
+.customer-proof__cta-secondary {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.customer-proof__cta-primary {
+  background: linear-gradient(135deg, #00FFD1, #00CCA8);
+  color: #0D0D0D;
+  border: 2px solid #00FFD1;
+}
+
+.customer-proof__cta-primary:hover {
+  background: linear-gradient(135deg, #00E6BC, #00B897);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 209, 0.4);
+}
+
+.customer-proof__cta-secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.customer-proof__cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Responsive: Customer Proof Section */
+@media (max-width: 968px) {
+  .customer-logos__grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .customer-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px 20px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-proof__cta-buttons {
+    flex-direction: column;
+  }
+
+  .customer-proof__cta-primary,
+  .customer-proof__cta-secondary {
+    width: 100%;
+  }
+}
+
 /* Hardware Acceleration */
 .service-card,
 .industry-card,

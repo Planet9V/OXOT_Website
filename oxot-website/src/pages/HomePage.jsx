@@ -132,6 +132,107 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Attorney-Client Privilege Differentiation */}
+      <section className="legal-moat-section">
+        <div className="legal-moat__container">
+          <div className="legal-moat__badge">
+            <span className="legal-moat__badge-icon">⚖️</span>
+            <span className="legal-moat__badge-text">INDUSTRY'S ONLY ATTORNEY-CLIENT PRIVILEGE PROTECTION</span>
+          </div>
+          <h2 className="legal-moat__title">
+            What Happens During a Breach Stays Privileged
+          </h2>
+          <p className="legal-moat__subtitle">
+            OXOT's True Diligence™ Framework is the only OT/ICS cybersecurity service that operates under
+            attorney-client privilege—protecting your security findings, incident details, and vulnerability
+            assessments from discovery in litigation, regulatory proceedings, and civil lawsuits.
+          </p>
+
+          <div className="legal-moat__comparison">
+            <div className="legal-moat__column legal-moat__column--threat">
+              <h3 className="legal-moat__column-title">
+                <span className="legal-moat__icon">❌</span>
+                Traditional OT Security Vendors
+              </h3>
+              <ul className="legal-moat__list">
+                <li>Security assessments discoverable in litigation</li>
+                <li>Incident reports become plaintiff evidence</li>
+                <li>Vulnerability findings used against you</li>
+                <li>CISO emails and logs exposed in depositions</li>
+                <li>Regulatory inquiries access full documentation</li>
+                <li>No legal protection for security operations</li>
+              </ul>
+              <div className="legal-moat__risk-badge">
+                <strong>Legal Exposure Risk:</strong> Unlimited
+              </div>
+            </div>
+
+            <div className="legal-moat__column legal-moat__column--protection">
+              <h3 className="legal-moat__column-title">
+                <span className="legal-moat__icon">✅</span>
+                OXOT's True Diligence™ Framework
+              </h3>
+              <ul className="legal-moat__list">
+                <li><strong>Attorney-client privilege</strong> shields all security findings</li>
+                <li><strong>Work product doctrine</strong> protects incident response</li>
+                <li><strong>Privileged communications</strong> for vulnerability assessments</li>
+                <li><strong>Legal immunity</strong> for security operations documentation</li>
+                <li><strong>Regulatory protection</strong> via attorney representation</li>
+                <li><strong>Litigation defense</strong> built into every engagement</li>
+              </ul>
+              <div className="legal-moat__protection-badge">
+                <strong>Legal Protection:</strong> Maximum (Attorney-Client Privilege)
+              </div>
+            </div>
+          </div>
+
+          <div className="legal-moat__value-props">
+            <div className="legal-moat__value-prop">
+              <div className="value-prop__icon">🛡️</div>
+              <div className="value-prop__content">
+                <h4>Protected Security Operations</h4>
+                <p>All security assessments, incident response, and vulnerability findings conducted under legal privilege—immune from discovery</p>
+              </div>
+            </div>
+            <div className="legal-moat__value-prop">
+              <div className="value-prop__icon">⚖️</div>
+              <div className="value-prop__content">
+                <h4>Litigation Defense Shield</h4>
+                <p>When breach lawsuits arrive, your security documentation is legally protected—competitors' clients have no such protection</p>
+              </div>
+            </div>
+            <div className="legal-moat__value-prop">
+              <div className="value-prop__icon">🔒</div>
+              <div className="value-prop__content">
+                <h4>Regulatory Armor</h4>
+                <p>Engage with regulators through attorney representation—your security posture assessment stays privileged</p>
+              </div>
+            </div>
+            <div className="legal-moat__value-prop">
+              <div className="value-prop__icon">💼</div>
+              <div className="value-prop__content">
+                <h4>M&A Due Diligence Protection</h4>
+                <p>Cyber due diligence under privilege means deal-critical vulnerabilities never become public knowledge or negotiation weapons</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="legal-moat__cta-section">
+            <p className="legal-moat__cta-text">
+              Why would you work with a vendor whose security findings can be used against you in court?
+            </p>
+            <div className="legal-moat__cta-buttons">
+              <Link to="/solutions" className="legal-moat__cta-primary">
+                Explore True Diligence™ Framework
+              </Link>
+              <Link to="/services" className="legal-moat__cta-secondary">
+                View All Protected Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* AEON Featured Section */}
       <section className="aeon-featured-section">
         <div className="aeon-featured__container">
@@ -353,6 +454,132 @@ const HomePage = () => {
               <p>Treatment facilities, distribution networks, SCADA protection, and compliance</p>
               <span className="industry-card__arrow">→</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Proof - Trusted By */}
+      <section className="customer-proof-section">
+        <div className="customer-proof__container">
+          <div className="customer-proof__header">
+            <span className="customer-proof__category">TRUSTED BY INDUSTRY LEADERS</span>
+            <h2 className="customer-proof__title">
+              Protecting Critical Infrastructure Across North America
+            </h2>
+            <p className="customer-proof__subtitle">
+              From Fortune 500 manufacturers to essential utilities, our clients trust OXOT to protect their most critical operational assets.
+            </p>
+          </div>
+
+          {/* Customer Logos */}
+          <div className="customer-logos">
+            <div className="customer-logos__label">Serving organizations across:</div>
+            <div className="customer-logos__grid">
+              <div className="customer-logo-placeholder">
+                <span className="industry-tag">Energy Generation</span>
+              </div>
+              <div className="customer-logo-placeholder">
+                <span className="industry-tag">Electric Cooperatives</span>
+              </div>
+              <div className="customer-logo-placeholder">
+                <span className="industry-tag">Manufacturing</span>
+              </div>
+              <div className="customer-logo-placeholder">
+                <span className="industry-tag">Water/Wastewater</span>
+              </div>
+              <div className="customer-logo-placeholder">
+                <span className="industry-tag">Food & Beverage</span>
+              </div>
+              <div className="customer-logo-placeholder">
+                <span className="industry-tag">Transportation</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Customer Stats */}
+          <div className="customer-stats">
+            <div className="customer-stat">
+              <div className="customer-stat__value">$0</div>
+              <div className="customer-stat__label">Ransoms Paid (2020-Present)</div>
+            </div>
+            <div className="customer-stat">
+              <div className="customer-stat__value">100%</div>
+              <div className="customer-stat__label">Client Retention Rate</div>
+            </div>
+            <div className="customer-stat">
+              <div className="customer-stat__value">&lt; 6 hrs</div>
+              <div className="customer-stat__label">Average Incident Containment</div>
+            </div>
+            <div className="customer-stat">
+              <div className="customer-stat__value">24/7/365</div>
+              <div className="customer-stat__label">Emergency Response</div>
+            </div>
+          </div>
+
+          {/* Featured Testimonials */}
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="testimonial-card__quote-icon">"</div>
+              <blockquote className="testimonial-card__quote">
+                When ransomware hit our manufacturing plant at 2 AM, OXOT had engineers onsite within 90 minutes.
+                We were back online in 6 hours with zero ransom paid and no production data lost. The attorney-client
+                privilege protection meant our vulnerability findings stayed protected during the subsequent litigation.
+              </blockquote>
+              <div className="testimonial-card__attribution">
+                <div className="testimonial-card__author">Director of IT/OT Security</div>
+                <div className="testimonial-card__company">Fortune 500 Food Manufacturer</div>
+              </div>
+              <div className="testimonial-card__outcome">
+                <strong>Outcome:</strong> Zero downtime, $0 ransom, litigation-protected documentation
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-card__quote-icon">"</div>
+              <blockquote className="testimonial-card__quote">
+                OXOT's AEON Digital Twin gave us visibility we didn't know was possible. We identified 40% more
+                OT assets than our previous vendor, discovered unauthorized network connections, and gained real-time
+                monitoring of grid frequency stability. This isn't just security—it's operational intelligence.
+              </blockquote>
+              <div className="testimonial-card__attribution">
+                <div className="testimonial-card__author">VP of Engineering & Operations</div>
+                <div className="testimonial-card__company">Regional Electric Cooperative</div>
+              </div>
+              <div className="testimonial-card__outcome">
+                <strong>Outcome:</strong> 40% more asset visibility, real-time grid stability monitoring
+              </div>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-card__quote-icon">"</div>
+              <blockquote className="testimonial-card__quote">
+                During our acquisition due diligence, OXOT's True Diligence™ Framework uncovered $15M in hidden cyber
+                liabilities that would have become our problem post-close. The attorney-client privilege meant we could
+                negotiate deal terms without exposing the target's vulnerabilities publicly. ROI was 50:1.
+              </blockquote>
+              <div className="testimonial-card__attribution">
+                <div className="testimonial-card__author">Chief Risk Officer</div>
+                <div className="testimonial-card__company">Industrial M&A Acquirer</div>
+              </div>
+              <div className="testimonial-card__outcome">
+                <strong>Outcome:</strong> $15M liabilities identified, privileged negotiations, 50:1 ROI
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="customer-proof__cta-section">
+            <p className="customer-proof__cta-text">
+              Join the critical infrastructure operators who trust OXOT with their most vital assets.
+            </p>
+            <div className="customer-proof__cta-buttons">
+              <Link to="/services" className="customer-proof__cta-primary">
+                Request Assessment
+              </Link>
+              <Link to="/solutions" className="customer-proof__cta-secondary">
+                View Case Studies
+              </Link>
+            </div>
           </div>
         </div>
       </section>

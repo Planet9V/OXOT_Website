@@ -515,8 +515,8 @@ const ServicesPage = () => {
                   <div className="stat-box__label">Manufacturing Ransomware Targeting Rate</div>
                 </div>
                 <div className="stat-box">
-                  <div className="stat-box__value">100%</div>
-                  <div className="stat-box__label">Successful Containment Rate (No Operational Impact)</div>
+                  <div className="stat-box__value">$0</div>
+                  <div className="stat-box__label">Ransoms Paid by OXOT Clients (2020-Present)</div>
                 </div>
                 <div className="stat-box">
                   <div className="stat-box__value">24/7/365</div>
@@ -748,7 +748,7 @@ const ServicesPage = () => {
                   </p>
                 </div>
                 <div className="capability-expanded">
-                  <h4>General Adversarial Networks (GANs)</h4>
+                  <h4>Generative Adversarial Networks (GANs)</h4>
                   <p>
                     Advanced AI techniques for security testing, synthetic data generation, and adversary
                     behavior modeling. Enables realistic threat simulation without operational risk.
