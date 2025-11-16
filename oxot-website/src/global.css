@@ -25,6 +25,9 @@
 @import './pages/ServicesPage.css';
 @import './pages/IndustriesPage.css';
 
+/* Enhanced Pages System (NEW) */
+@import './styles/enhanced-pages.css';
+
 /* ===================================
    OXOT BRAND OVERRIDES
    =================================== */
