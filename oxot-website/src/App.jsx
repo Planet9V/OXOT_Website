@@ -12,6 +12,7 @@ import ArticlesPage from './pages/ArticlesPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
 import SimulationHub from './pages/SimulationHub';
 import SimulationDetail from './pages/SimulationDetail';
+import AEONCyberTwinPage from './pages/AEONCyberTwinPage';
 import './global.css';
 
 // Wrapper component to handle page transitions with routing
@@ -37,6 +38,7 @@ function AppContent() {
       '/solutions': 'Solutions',
       '/services': 'Services',
       '/industries': 'Industries',
+      '/aeon': 'AEON Cyber Digital Twin',
       '/articles': 'Articles',
       '/simulations': 'Simulations',
       '/about': 'About',
@@ -95,6 +97,7 @@ function AppContent() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:serviceName" element={<ServicesPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/aeon" element={<AEONCyberTwinPage />} />
             <Route path="/articles" element={<ArticlesPage />} />
             <Route path="/articles/:id" element={<ArticleDetailPage />} />
             <Route path="/simulations" element={<SimulationHub />} />

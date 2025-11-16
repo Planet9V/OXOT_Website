@@ -30,6 +30,13 @@ const Navigation = () => {
 
   const navigationItems = [
     {
+      page: 'aeon',
+      label: 'AEON Cyber Digital Twin',
+      href: '/aeon',
+      isService: false,
+      anchors: []
+    },
+    {
       page: 'service-institutional-banking',
       label: 'Institutional Banking',
       href: '/service/institutional-banking',
