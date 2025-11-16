@@ -47,3 +47,559 @@
   position: absolute;
   left: 0;
 }
+
+/* ============================================ */
+/* NEW - ENHANCED SOLUTIONS PAGE STYLING       */
+/* ============================================ */
+
+/* Strategic Introduction Section */
+.solutions-strategic-intro {
+  padding: 120px 0 60px;
+  background: linear-gradient(180deg, #1a1b1c 0%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.solutions-strategic-intro::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(21, 67, 114, 0.1) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.solutions-strategic-intro__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
+  position: relative;
+  z-index: 1;
+}
+
+.solutions-strategic-intro__eyebrow {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #154372;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.solutions-strategic-intro__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 100;
+  line-height: 1.15;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  text-align: center;
+}
+
+.solutions-strategic-intro__subtitle {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 900px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+.solutions-strategic-intro__framework-callout {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 50px;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.15) 0%, rgba(21, 67, 114, 0.05) 100%);
+  border: 1px solid rgba(21, 67, 114, 0.3);
+  border-radius: 16px;
+  position: relative;
+}
+
+.solutions-strategic-intro__framework-callout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #154372, transparent);
+  border-radius: 16px 16px 0 0;
+}
+
+.framework-callout-badge {
+  display: inline-block;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: linear-gradient(135deg, #154372 0%, #1a5a8f 100%);
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.framework-callout-text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0;
+}
+
+/* Enhanced Solution Items */
+.solution-item--enhanced {
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.06) 0%, rgba(193, 2, 48, 0.02) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 50px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.solution-item--enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #154372, transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.solution-item--enhanced:hover {
+  border-color: rgba(21, 67, 114, 0.3);
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.10) 0%, rgba(193, 2, 48, 0.04) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.solution-item--enhanced:hover::before {
+  opacity: 1;
+}
+
+.solution-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.solution-item__header h3 {
+  margin: 0;
+  flex: 1;
+  min-width: 250px;
+}
+
+.solution-item__category {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  background: rgba(21, 67, 114, 0.2);
+  padding: 6px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(21, 67, 114, 0.3);
+}
+
+/* NOW/NEXT/NEVER Application Sections */
+.solution-application {
+  margin-top: 50px;
+  padding-top: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solution-application__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 40px 0;
+  text-align: center;
+}
+
+.solution-application__scenario {
+  margin-bottom: 32px;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border-left: 4px solid var(--scenario-color, #154372);
+  position: relative;
+}
+
+.scenario-badge {
+  display: inline-block;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: var(--scenario-color, #154372);
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.scenario-badge--now {
+  --scenario-color: #c10230;
+}
+
+.scenario-badge--next {
+  --scenario-color: #154372;
+}
+
+.scenario-badge--never {
+  --scenario-color: #666666;
+}
+
+.scenario-content h6 {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.4;
+}
+
+.scenario-content p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 16px 0;
+}
+
+.scenario-content p:last-child {
+  margin-bottom: 0;
+}
+
+.scenario-content strong {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* OpEx Impact Analysis */
+.solution-opex-impact {
+  margin-top: 50px;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.12) 0%, rgba(21, 67, 114, 0.05) 100%);
+  border: 1px solid rgba(21, 67, 114, 0.2);
+  border-radius: 16px;
+  position: relative;
+}
+
+.solution-opex-impact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #154372, transparent);
+  border-radius: 16px 16px 0 0;
+}
+
+.solution-opex-impact__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 32px 0;
+  text-align: center;
+}
+
+.opex-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.opex-impact-item {
+  text-align: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.opex-impact-item:hover {
+  background: rgba(21, 67, 114, 0.15);
+  transform: translateY(-4px);
+}
+
+.opex-impact-item__metric {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(36px, 5vw, 56px);
+  font-weight: 100;
+  color: #154372;
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.opex-impact-item__label {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.opex-impact-item__description {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+/* Tech Showcase (for AEON/Digital Twin) */
+.solution-tech-showcase {
+  margin-top: 40px;
+  padding: 40px;
+  background: rgba(21, 67, 114, 0.08);
+  border: 1px solid rgba(21, 67, 114, 0.2);
+  border-radius: 16px;
+}
+
+.solution-tech-showcase__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.solution-tech-showcase__intro {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 32px 0;
+}
+
+.tech-capabilities {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.tech-capability {
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.tech-capability:hover {
+  background: rgba(21, 67, 114, 0.15);
+  transform: translateX(4px);
+}
+
+.tech-capability__icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.tech-capability__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.tech-capability__description {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Sector Focus (for Cyber Defender) */
+.solution-sector-focus {
+  margin-top: 40px;
+  padding: 40px;
+  background: rgba(193, 2, 48, 0.06);
+  border: 1px solid rgba(193, 2, 48, 0.2);
+  border-radius: 16px;
+}
+
+.solution-sector-focus__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.solution-sector-focus__intro {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 32px 0;
+}
+
+.sector-challenges {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sector-challenge {
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  border-left: 4px solid #c10230;
+}
+
+.sector-challenge__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.sector-challenge__description {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Privacy Framework (for Confidential SOC) */
+.solution-privacy-framework {
+  margin-top: 40px;
+  padding: 40px;
+  background: rgba(21, 67, 114, 0.08);
+  border: 1px solid rgba(21, 67, 114, 0.2);
+  border-radius: 16px;
+}
+
+.solution-privacy-framework__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+}
+
+.solution-privacy-framework__intro {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 0 0 32px 0;
+}
+
+.privacy-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.privacy-benefit {
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.privacy-benefit:hover {
+  background: rgba(21, 67, 114, 0.15);
+  transform: translateX(4px);
+}
+
+.privacy-benefit__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.privacy-benefit__description {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .solution-item--enhanced {
+    padding: 40px 32px;
+  }
+
+  .tech-capabilities,
+  .opex-impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-item__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .solutions-strategic-intro {
+    padding: 80px 0 40px;
+  }
+
+  .solutions-strategic-intro__container,
+  .solutions-strategic-intro__framework-callout,
+  .solution-item--enhanced,
+  .solution-tech-showcase,
+  .solution-sector-focus,
+  .solution-privacy-framework,
+  .solution-opex-impact {
+    padding: 32px 24px;
+  }
+
+  .solution-application__scenario {
+    padding: 24px;
+  }
+
+  .solutions-strategic-intro__title {
+    font-size: clamp(28px, 8vw, 48px);
+  }
+}
