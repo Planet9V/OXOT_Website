@@ -1,0 +1,92 @@
+{
+  "id": "ma-cyber-due-diligence-hidden-liabilities",
+  "title": "The $15M Cyber Liability You Didn't Know You Bought",
+  "subtitle": "M&A Due Diligence for Industrial Operations",
+  "author": "OXOT M&A Practice",
+  "date": "2024-Q4",
+  "publishDate": "2024-11-15",
+  "category": "M&A Due Diligence",
+  "readTime": "9 min",
+  "wordCount": 3847,
+  "tags": [
+    "M&A",
+    "Due Diligence",
+    "Cyber-Physical Balance Sheet",
+    "True Diligence",
+    "OT Security",
+    "Industrial Acquisitions",
+    "Private Equity",
+    "Risk Quantification",
+    "NERC CIP",
+    "IEC 62443",
+    "Vendor Risk",
+    "Legacy Systems",
+    "Attorney-Client Privilege"
+  ],
+  "featured": true,
+  "priority": "high",
+  "industries": [
+    "Energy",
+    "Manufacturing",
+    "Water",
+    "Transportation"
+  ],
+  "frameworks": [
+    "Cyber-Physical Balance Sheet",
+    "True Diligence™",
+    "FAIR (Factor Analysis of Information Risk)",
+    "IEC 62443",
+    "NERC CIP",
+    "TSA Security Directives"
+  ],
+  "downloadable": {
+    "title": "M&A Cyber DD Checklist",
+    "description": "Complete 15-point cybersecurity due diligence checklist for industrial acquisitions",
+    "format": "PDF",
+    "filename": "OXOT_MA_Cyber_DD_Checklist.pdf",
+    "cta": "Download Free Checklist"
+  },
+  "seo": {
+    "metaTitle": "The $15M Hidden Cyber Liability in M&A Due Diligence | OXOT",
+    "metaDescription": "Discover how OXOT's Cyber-Physical Balance Sheet framework uncovered $15M in hidden cyber liabilities during industrial M&A due diligence. Learn the OT-specific risks traditional IT audits miss.",
+    "focusKeywords": [
+      "M&A cyber due diligence",
+      "industrial acquisitions cybersecurity",
+      "OT risk assessment M&A",
+      "cyber-physical balance sheet",
+      "True Diligence framework"
+    ],
+    "canonicalUrl": "/articles/ma-cyber-due-diligence-hidden-liabilities"
+  },
+  "cta": {
+    "primary": "Schedule a Confidential M&A Consultation",
+    "secondary": "Download Due Diligence Checklist",
+    "link": "/contact"
+  },
+  "relatedArticles": [
+    "energy-ma-cybersecurity-due-diligence",
+    "manufacturing-ma-framework",
+    "iec-62443-ma-integration",
+    "ransomware-readiness-assessment"
+  ],
+  "testimonial": {
+    "quote": "OXOT uncovered $15 million in hidden cyber liabilities during our acquisition due diligence. Without their Cyber-Physical Balance Sheet framework, we would have inherited a ticking time bomb.",
+    "attribution": "Private Equity Partner, Industrial Manufacturing Acquisition",
+    "impact": "$15M in prevented losses",
+    "roi": "50:1"
+  },
+  "keyFindings": [
+    "Post-close cyber discovery costs 50-100x more than pre-close due diligence",
+    "$150K assessment prevented $15M post-close liability (50:1 ROI)",
+    "40% shadow OT asset gap between seller disclosure and actual environment",
+    "Legacy OT systems: $0 book value = $8-15M cyber liability",
+    "Attorney-client privilege protection changes negotiation dynamics"
+  ],
+  "statistics": {
+    "assessmentsCompleted": "100+",
+    "dealValueRange": "$10M - $5B",
+    "averageROI": "50:1 to 100:1",
+    "shadowOTGap": "40%",
+    "legacySystemPrevalence": "50% of OT environments"
+  }
+}

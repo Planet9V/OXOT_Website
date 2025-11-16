@@ -1,0 +1,321 @@
+{
+  "id": "ransomware-readiness-assessment-framework",
+  "title": "Ransomware Readiness Assessment: Why 90% of OT Operators Fail",
+  "subtitle": "(And How to Pass)",
+  "author": "OXOT Crisis Response Team",
+  "contributors": [
+    "Jim McKenney",
+    "OXOT Incident Response Team",
+    "OXOT Research Division"
+  ],
+  "date": "2024-Q4",
+  "publishDate": "2024-11-15",
+  "lastUpdated": "2024-11-15",
+  "category": "Ransomware & Incident Response",
+  "primaryCategory": "Crisis Management",
+  "secondaryCategories": [
+    "Risk Assessment",
+    "OT Security",
+    "Incident Response",
+    "IEC 62443"
+  ],
+  "readTime": "9 min",
+  "wordCount": 4850,
+  "tags": [
+    "Ransomware",
+    "RRA",
+    "Converged Defense",
+    "Incident Response",
+    "IEC 62443",
+    "CISA CSET",
+    "Tabletop Exercise",
+    "OT Security",
+    "Crisis Management",
+    "True Diligence",
+    "Backup & Recovery",
+    "Network Segmentation",
+    "Colonial Pipeline",
+    "JBS Foods",
+    "Manufacturing Cybersecurity",
+    "Energy Sector Security",
+    "CSMS"
+  ],
+  "sectors": [
+    "Manufacturing",
+    "Energy",
+    "Water & Wastewater",
+    "Transportation",
+    "All Critical Infrastructure"
+  ],
+  "targetAudience": [
+    "Plant Managers",
+    "CISOs",
+    "OT Security Leaders",
+    "Incident Response Teams",
+    "Industrial Engineers",
+    "Risk Management Executives",
+    "Critical Infrastructure Operators"
+  ],
+  "featured": true,
+  "priority": "high",
+  "downloadable": "RRA Self-Assessment Checklist",
+  "downloadableFiles": [
+    {
+      "title": "RRA Self-Assessment Checklist (20 Questions)",
+      "filename": "RRA-Self-Assessment-Checklist.md",
+      "format": "PDF",
+      "description": "Complete 20-question diagnostic with scoring matrix and actionable recommendations"
+    },
+    {
+      "title": "OXOT Ransomware Readiness Framework Overview",
+      "filename": "ransomware-readiness-assessment-framework.md",
+      "format": "PDF",
+      "description": "Full article (4850 words) covering RRA methodology, case studies, and implementation guide"
+    }
+  ],
+  "relatedServices": [
+    "Crisis Management & Incident Response",
+    "Cyber Assurance, Testing & Validation",
+    "Cyber Engineering & Integration"
+  ],
+  "relatedSolutions": [
+    "True Diligence™ Framework",
+    "AEON Cyber Digital Twin",
+    "IEC 62443 Lifecycle Implementation"
+  ],
+  "relatedArticles": [
+    "The Resilient Factory: A Ransomware Readiness Framework for Manufacturing",
+    "The Resilient Grid: A Ransomware Readiness Framework for Energy",
+    "Converged Defense: IT/OT Ransomware Readiness Framework"
+  ],
+  "caseStudies": [
+    {
+      "name": "Colonial Pipeline",
+      "year": 2021,
+      "impact": "$4.4M ransom + $1.85B market cap loss",
+      "downtime": "6 days",
+      "sector": "Energy"
+    },
+    {
+      "name": "JBS Foods",
+      "year": 2021,
+      "impact": "$11M ransom payment",
+      "downtime": "4 days",
+      "sector": "Food & Agriculture"
+    },
+    {
+      "name": "Anonymous Manufacturing Client (OXOT)",
+      "year": 2023,
+      "impact": "$127K incident cost (avoided $4.2M in losses)",
+      "downtime": "18 hours",
+      "sector": "Manufacturing",
+      "ransomPaid": "$0"
+    }
+  ],
+  "keyStatistics": [
+    {
+      "stat": "90%",
+      "description": "OT operators who discover readiness gaps during the incident (not before)"
+    },
+    {
+      "stat": "70%",
+      "description": "Manufacturing sector's share of industrial ransomware attacks"
+    },
+    {
+      "stat": "28%",
+      "description": "Annual breach probability for OT environments"
+    },
+    {
+      "stat": "$0",
+      "description": "Ransoms paid by OXOT clients (2020-present)"
+    },
+    {
+      "stat": "< 2 hours",
+      "description": "OXOT average incident response time (24/7/365)"
+    },
+    {
+      "stat": "18 hours",
+      "description": "Average recovery time for OXOT RRA clients (vs. 21-day industry average)"
+    },
+    {
+      "stat": "356+ pages",
+      "description": "OXOT proprietary RRA framework documentation"
+    },
+    {
+      "stat": "45%",
+      "description": "Energy sector breaches originating with third-party vendors"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "IEC 62443",
+      "components": [
+        "IEC 62443-2-1 (CSMS)",
+        "IEC 62443-3-2 (Risk Assessment - IRA/DRA)",
+        "IEC 62443-3-3 (System Security Requirements)",
+        "Zone-Conduit-Role (ZCR) Architecture"
+      ]
+    },
+    {
+      "name": "CISA CSET RRA",
+      "description": "Ransomware Readiness Assessment module within Cyber Security Evaluation Tool"
+    },
+    {
+      "name": "OXOT Converged Defense Framework",
+      "phases": [
+        "Phase 1: Asset Inventory and Dependency Mapping",
+        "Phase 2: Attack Surface Analysis",
+        "Phase 3: Recovery Capability Testing (Tabletop + Technical)",
+        "Phase 4: Legal/Regulatory Preparedness",
+        "Phase 5: Continuous Improvement"
+      ]
+    },
+    {
+      "name": "MITRE ATT&CK for ICS",
+      "description": "Threat modeling framework for industrial control systems"
+    },
+    {
+      "name": "STRIDE Threat Modeling",
+      "description": "Collaborative threat modeling methodology (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege)"
+    }
+  ],
+  "callToAction": {
+    "primary": "Schedule Comprehensive RRA",
+    "primaryLink": "/services/crisis-management",
+    "secondary": "Download Self-Assessment Checklist",
+    "secondaryLink": "/downloads/rra-self-assessment",
+    "emergency": "24/7 Emergency Hotline Available",
+    "emergencyNote": "< 2 hour response time for active incidents"
+  },
+  "seo": {
+    "metaTitle": "Ransomware Readiness Assessment: Why 90% of OT Operators Fail | OXOT",
+    "metaDescription": "Comprehensive guide to ransomware readiness for OT/ICS operators. Learn why 90% fail the test, OXOT's Converged Defense Framework, and how to achieve $0 ransoms paid. Includes free 20-question self-assessment.",
+    "keywords": [
+      "ransomware readiness assessment",
+      "OT ransomware",
+      "ICS ransomware protection",
+      "manufacturing ransomware",
+      "energy sector ransomware",
+      "IEC 62443 ransomware",
+      "CISA CSET RRA",
+      "ransomware tabletop exercise",
+      "incident response OT",
+      "converged defense framework",
+      "True Diligence ransomware",
+      "Colonial Pipeline lessons",
+      "JBS Foods ransomware",
+      "OT backup strategy",
+      "ransomware recovery OT"
+    ],
+    "openGraph": {
+      "type": "article",
+      "image": "/images/articles/ransomware-readiness-hero.jpg",
+      "imageAlt": "Ransomware Readiness Assessment Framework - OXOT Crisis Response"
+    }
+  },
+  "leadMagnets": [
+    {
+      "type": "Self-Assessment Tool",
+      "title": "20-Question RRA Diagnostic",
+      "deliveryMethod": "Immediate download after email capture"
+    },
+    {
+      "type": "Consultation Offer",
+      "title": "Complimentary RRA Scoping Call",
+      "deliveryMethod": "Calendly scheduling link"
+    }
+  ],
+  "contentStructure": {
+    "sections": [
+      {
+        "title": "The Harsh Truth",
+        "wordCount": 250,
+        "keyPoints": [
+          "90% failure rate statistic",
+          "Organizations think they're ready but aren't",
+          "Colonial Pipeline, JBS Foods impact data"
+        ]
+      },
+      {
+        "title": "What Ransomware Readiness Actually Means",
+        "wordCount": 600,
+        "keyPoints": [
+          "Not just backups - complete operational resilience",
+          "6 critical dimensions of readiness",
+          "OT-specific requirements vs. IT approaches"
+        ]
+      },
+      {
+        "title": "OXOT Ransomware Readiness Assessment Framework",
+        "wordCount": 1400,
+        "keyPoints": [
+          "5-phase Converged Defense methodology",
+          "Phase 1: Asset inventory and dependency mapping",
+          "Phase 2: Attack surface analysis",
+          "Phase 3: Recovery capability testing (tabletop + technical)",
+          "Phase 4: Legal/regulatory preparedness",
+          "Phase 5: Continuous improvement"
+        ]
+      },
+      {
+        "title": "Real Incident Lessons",
+        "wordCount": 700,
+        "keyPoints": [
+          "Colonial Pipeline case study",
+          "JBS Foods case study",
+          "Anonymous OXOT client success story ($0 ransom paid)"
+        ]
+      },
+      {
+        "title": "Converged Defense Framework",
+        "wordCount": 400,
+        "keyPoints": [
+          "3 pillars: mediated cultural alignment, standards-based risk, continuous validation",
+          "OXOT's proprietary approach",
+          "Differentiators from compliance-focused assessments"
+        ]
+      },
+      {
+        "title": "Self-Assessment Checklist",
+        "wordCount": 600,
+        "keyPoints": [
+          "20 yes/no questions across 6 domains",
+          "Scoring: 0-7 Critical, 8-12 High, 13-17 Medium, 18-20 Low Risk",
+          "Immediate actionable diagnostics"
+        ]
+      },
+      {
+        "title": "Taking Action",
+        "wordCount": 900,
+        "keyPoints": [
+          "3 engagement options: self-directed, TTX-only, comprehensive RRA",
+          "OXOT RRA deliverables and investment levels",
+          "$0 ransoms paid track record"
+        ]
+      }
+    ],
+    "totalSections": 7,
+    "estimatedReadTime": "9 minutes"
+  },
+  "conversionGoals": [
+    "RRA consultation request",
+    "Self-assessment tool download (email capture)",
+    "24/7 hotline contact for active incidents",
+    "Service page navigation (Crisis Management)"
+  ],
+  "internalLinks": [
+    "/services/crisis-management",
+    "/services/cyber-assurance-testing",
+    "/solutions/true-diligence",
+    "/solutions/aeon-digital-twin",
+    "/industries/manufacturing",
+    "/industries/energy"
+  ],
+  "legalDisclaimer": "This article provides general information about ransomware readiness and does not constitute cybersecurity assessment, legal advice, or guarantee of security posture. Organizations should engage qualified OT cybersecurity professionals for comprehensive evaluation.",
+  "version": "1.0",
+  "approvals": {
+    "technicalReview": "Jim McKenney",
+    "legalReview": "Pending",
+    "marketingReview": "Pending"
+  }
+}

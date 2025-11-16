@@ -1,0 +1,206 @@
+{
+  "id": "iec-62443-complete-framework-guide",
+  "title": "IEC 62443: The Complete Framework for OT/ICS Cybersecurity - A Practitioner's Guide",
+  "subtitle": "From Security Levels to Zone-Conduit Architecture: The Definitive Guide for Asset Owners",
+  "author": "OXOT Security Team",
+  "authorCredentials": "ISA/IEC 62443 Cybersecurity Experts & ISASecure Certified Security Assessors",
+  "date": "2024-Q4",
+  "publishDate": "2024-12-15",
+  "lastUpdated": "2024-12-15",
+  "category": "Standards & Compliance",
+  "subcategory": "IEC 62443",
+  "readTime": "10 min",
+  "wordCount": 4850,
+  "tags": [
+    "IEC 62443",
+    "IACS",
+    "Zone-Conduit",
+    "Security Levels",
+    "ISASecure",
+    "CSMS",
+    "OT Security",
+    "Risk Assessment",
+    "Defense in Depth"
+  ],
+  "industries": [
+    "Energy",
+    "Manufacturing",
+    "Water & Wastewater",
+    "Transportation"
+  ],
+  "frameworks": [
+    "IEC 62443-2-1",
+    "IEC 62443-3-2",
+    "IEC 62443-3-3",
+    "IEC 62443-4-1",
+    "IEC 62443-4-2"
+  ],
+  "featured": true,
+  "featuredPriority": 1,
+  "heroImage": "/images/articles/iec-62443-framework-hero.jpg",
+  "thumbnailImage": "/images/articles/iec-62443-framework-thumb.jpg",
+  "excerpt": "IEC 62443 is THE international standard for OT/ICS security. This comprehensive practitioner's guide explains the complete framework—from Security Levels (SL 1-4) to Zone-Conduit-Role architecture, Foundational Requirements (FR 1-7), and the 112 artifacts that transform cybersecurity from compliance checkbox to measurable capability.",
+  "keyTakeaways": [
+    "Understand the complete IEC 62443 architecture across all parts (2-1 through 4-2)",
+    "Master Security Levels (SL-T, SL-C, SL-A) and their practical application",
+    "Implement Zone-Conduit-Role (ZCR) architecture for defense-in-depth",
+    "Navigate the 112 artifacts with the 12 essential artifacts for quick wins",
+    "Leverage ISASecure certification (SDLA, CSA, SSA) in procurement",
+    "Avoid common implementation pitfalls that derail CSMS programs",
+    "Quantify ROI: 312% return demonstrated in manufacturing case study"
+  ],
+  "targetAudience": [
+    "CISOs and Security Leaders",
+    "OT/ICS Security Managers",
+    "Plant Managers and Asset Owners",
+    "Control Engineers",
+    "System Integrators",
+    "Procurement Officers",
+    "Compliance Managers",
+    "Board Members and Executives"
+  ],
+  "difficulty": "Intermediate to Advanced",
+  "prerequisites": [
+    "Basic understanding of OT/ICS environments (SCADA, DCS, PLC)",
+    "Familiarity with risk assessment concepts",
+    "General cybersecurity knowledge (helpful but not required)"
+  ],
+  "relatedArticles": [
+    "playbook-operators-lifecycle-approach-iec-62443",
+    "isasecure-certification-guide-sdla-csa-ssa",
+    "zone-conduit-architecture-brownfield-plants",
+    "ransomware-readiness-assessment-iec-62443",
+    "iec-62443-procurement-rfp-templates"
+  ],
+  "relatedSolutions": [
+    "aeon-cyber-digital-twin",
+    "ransomware-readiness-assessment",
+    "iec-62443-lifecycle-implementation"
+  ],
+  "relatedServices": [
+    "cyber-assurance-testing",
+    "iec-62443-compliance-validation",
+    "risk-assessment-iec-62443-3-2",
+    "csms-development-2-1"
+  ],
+  "gatedContent": {
+    "enabled": true,
+    "contentType": "artifact-templates",
+    "downloadTitle": "12 Essential IEC 62443 Artifacts",
+    "downloadDescription": "Downloadable templates for Business Rationale, CRS, Risk Assessment, ZCR Architecture, CFAT/CSAT, RFP Language, and more",
+    "formFields": [
+      "name",
+      "email",
+      "company",
+      "title",
+      "industry",
+      "phone"
+    ],
+    "ctaText": "Download Artifact Templates",
+    "deliverableFormat": "ZIP containing 12 MS Word/Excel templates + PDF guide",
+    "nurtureCampaign": "iec-62443-implementation-series"
+  },
+  "callToAction": {
+    "primary": {
+      "text": "Schedule IEC 62443 Consultation",
+      "link": "/contact?service=iec-62443-consultation",
+      "description": "Speak with an ISA/IEC 62443 Cybersecurity Expert about your CSMS implementation"
+    },
+    "secondary": {
+      "text": "Download 12 Essential Artifacts",
+      "link": "#gated-content-form",
+      "description": "Get templates for the highest-ROI artifacts from the 112-artifact framework"
+    }
+  },
+  "seo": {
+    "metaTitle": "IEC 62443 Complete Framework Guide: Security Levels, Zones, & 112 Artifacts",
+    "metaDescription": "Comprehensive IEC 62443 practitioner's guide for OT/ICS security. Learn Security Levels (SL 1-4), Zone-Conduit architecture, Foundational Requirements (FR 1-7), ISASecure certification, and navigate all 112 artifacts. Written by ISASecure assessors.",
+    "keywords": [
+      "IEC 62443",
+      "IEC 62443-2-1",
+      "IEC 62443-3-2",
+      "IEC 62443-3-3",
+      "Security Levels",
+      "SL-T SL-C SL-A",
+      "Zone Conduit Role",
+      "CSMS",
+      "ISASecure",
+      "IACS cybersecurity",
+      "OT security framework",
+      "Foundational Requirements",
+      "IEC 62443 artifacts",
+      "IEC 62443 implementation"
+    ],
+    "canonicalUrl": "/articles/iec-62443-complete-framework-guide",
+    "openGraph": {
+      "title": "IEC 62443: The Complete Framework for OT/ICS Cybersecurity",
+      "description": "Master IEC 62443 with this comprehensive practitioner's guide covering Security Levels, Zone-Conduit architecture, 112 artifacts, and real-world implementation strategies.",
+      "image": "/images/articles/iec-62443-framework-og.jpg",
+      "type": "article"
+    },
+    "schema": {
+      "@context": "https://schema.org",
+      "@type": "TechnicalArticle",
+      "headline": "IEC 62443: The Complete Framework for OT/ICS Cybersecurity - A Practitioner's Guide",
+      "author": {
+        "@type": "Organization",
+        "name": "OXOT Security Team",
+        "description": "ISA/IEC 62443 Cybersecurity Experts and ISASecure Certified Security Assessors"
+      },
+      "datePublished": "2024-12-15",
+      "dateModified": "2024-12-15",
+      "keywords": "IEC 62443, Security Levels, Zone-Conduit, ISASecure, CSMS, OT Security",
+      "articleSection": "Standards & Compliance",
+      "wordCount": 4850,
+      "timeRequired": "PT10M",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "CISOs, OT Security Managers, Asset Owners, Control Engineers"
+      }
+    }
+  },
+  "analytics": {
+    "trackingCategory": "Articles",
+    "trackingLabel": "IEC 62443 Complete Framework",
+    "conversionGoals": [
+      "artifact-download",
+      "consultation-request",
+      "newsletter-signup"
+    ],
+    "contentEngagementTargets": {
+      "timeOnPage": 480,
+      "scrollDepth": 75,
+      "ctaClicks": 1
+    }
+  },
+  "contentQuality": {
+    "wordCount": 4850,
+    "readingLevel": "College Graduate",
+    "technicalDepth": "High",
+    "practicalExamples": 15,
+    "visualAids": 3,
+    "citations": 25,
+    "authorCredibility": "ISASecure Certified Assessors with 100+ implementations"
+  },
+  "versionHistory": [
+    {
+      "version": "1.0",
+      "date": "2024-12-15",
+      "changes": "Initial publication - comprehensive framework guide with 112-artifact catalog reference"
+    }
+  ],
+  "internalNotes": {
+    "researchSources": [
+      "Operator's Playbook (421 pages)",
+      "IEC 62443 Complete Artifacts Guide (112 artifacts documented)",
+      "ServicesPage.jsx IEC 62443 content",
+      "ISA Global Cybersecurity Alliance (ISAGCA) resources"
+    ],
+    "reviewers": [
+      "Senior IEC 62443 Consultant",
+      "ISASecure Certified Security Assessor",
+      "OT Security Practice Lead"
+    ],
+    "contentStrategy": "Flagship technical article establishing OXOT as IEC 62443 thought leader. Designed to generate gated content leads via 12-artifact download and consultation requests. Supports services: Cyber Assurance, IEC 62443 Compliance Validation, CSMS Development."
+  }
+}
