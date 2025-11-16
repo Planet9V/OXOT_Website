@@ -37,6 +37,13 @@ const Navigation = () => {
       anchors: []
     },
     {
+      page: 'agent-red',
+      label: 'Agent Red',
+      href: '/agent-red',
+      isService: false,
+      anchors: []
+    },
+    {
       page: 'service-institutional-banking',
       label: 'Institutional Banking',
       href: '/service/institutional-banking',
