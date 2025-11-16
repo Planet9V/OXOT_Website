@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
 import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
+import BackgroundTestPage from './pages/BackgroundTestPage';
 import './global.css';
 
 // Wrapper component to handle page transitions with routing
@@ -34,7 +35,8 @@ function AppContent() {
       '/services': 'Services',
       '/industries': 'Industries',
       '/about': 'About',
-      '/contact': 'Contact'
+      '/contact': 'Contact',
+      '/r3f-background-test': 'Background Test'
     };
 
     const pageName = pageNames[location.pathname] || 'OXOT';
@@ -91,6 +93,7 @@ function AppContent() {
             <Route path="/industries" element={<IndustriesPage />} />
             <Route path="/about" element={<SolutionsPage />} />
             <Route path="/contact" element={<IndustriesPage />} />
+            <Route path="/r3f-background-test" element={<BackgroundTestPage />} />
           </Routes>
         </div>
       </main>
