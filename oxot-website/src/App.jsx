@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
 import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
+import ArticleLibraryPage from './pages/ArticleLibraryPage';
 import './global.css';
 
 // Wrapper component to handle page transitions with routing
@@ -33,6 +34,9 @@ function AppContent() {
       '/solutions': 'Solutions',
       '/services': 'Services',
       '/industries': 'Industries',
+      '/articles': 'Knowledge Library',
+      '/blindspots': 'Blind Spots',
+      '/simulations': 'Simulations',
       '/about': 'About',
       '/contact': 'Contact'
     };
@@ -89,6 +93,10 @@ function AppContent() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:serviceName" element={<ServicesPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/articles" element={<ArticleLibraryPage />} />
+            <Route path="/articles/:slug" element={<ArticleLibraryPage />} />
+            <Route path="/blindspots" element={<ArticleLibraryPage />} />
+            <Route path="/simulations" element={<ArticleLibraryPage />} />
             <Route path="/about" element={<SolutionsPage />} />
             <Route path="/contact" element={<IndustriesPage />} />
           </Routes>
