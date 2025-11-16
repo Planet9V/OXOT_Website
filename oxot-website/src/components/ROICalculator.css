@@ -1,0 +1,467 @@
+/* ROI Calculator Styles */
+.roi-calculator {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.1) 0%, rgba(10, 10, 10, 1) 100%);
+}
+
+.roi-calculator__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.roi-calculator__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.roi-calculator__badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(0, 255, 209, 0.2), rgba(21, 67, 114, 0.2));
+  border: 1px solid #00FFD1;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00FFD1;
+  margin-bottom: 20px;
+}
+
+.roi-calculator__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 200;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
+
+.roi-calculator__subtitle {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Form Styles */
+.roi-calculator__form {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.roi-form-section {
+  margin-bottom: 50px;
+}
+
+.roi-form-section:last-of-type {
+  margin-bottom: 40px;
+}
+
+.roi-form-section__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 25px 0;
+  padding-bottom: 15px;
+  border-bottom: 2px solid rgba(0, 255, 209, 0.3);
+}
+
+.roi-form-section--lead-capture {
+  background: rgba(0, 255, 209, 0.03);
+  border: 1px solid rgba(0, 255, 209, 0.2);
+  padding: 30px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.roi-lead-capture-text {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 25px 0;
+}
+
+.roi-form-group {
+  margin-bottom: 25px;
+}
+
+.roi-form-group label {
+  display: block;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.roi-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.roi-input-prefix,
+.roi-input-suffix {
+  position: absolute;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.roi-input-prefix {
+  left: 15px;
+}
+
+.roi-input-suffix {
+  right: 15px;
+}
+
+.roi-form-group input[type="number"],
+.roi-form-group input[type="email"],
+.roi-form-group input[type="text"],
+.roi-form-group select {
+  width: 100%;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.roi-input-wrapper input {
+  padding-left: 35px;
+  padding-right: 45px;
+}
+
+.roi-form-group input:focus,
+.roi-form-group select:focus {
+  outline: none;
+  border-color: #00FFD1;
+  background: rgba(0, 255, 209, 0.05);
+  box-shadow: 0 0 0 3px rgba(0, 255, 209, 0.1);
+}
+
+.roi-form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.roi-form-help {
+  display: block;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.roi-calculator__submit {
+  width: 100%;
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #0D0D0D;
+  background: linear-gradient(135deg, #00FFD1, #00CCA8);
+  border: none;
+  border-radius: 8px;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+.roi-calculator__submit:hover {
+  background: linear-gradient(135deg, #00E6BC, #00B897);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 209, 0.4);
+}
+
+/* Results Styles */
+.roi-results {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.roi-results__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.roi-results__header h3 {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.roi-results__header p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.roi-results__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.roi-result-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 30px;
+  transition: all 0.3s ease;
+}
+
+.roi-result-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.roi-result-card--danger {
+  border-color: rgba(193, 2, 48, 0.5);
+  background: linear-gradient(135deg, rgba(193, 2, 48, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.roi-result-card--critical {
+  border-color: rgba(255, 85, 85, 0.5);
+  background: linear-gradient(135deg, rgba(255, 85, 85, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.roi-result-card--warning {
+  border-color: rgba(255, 165, 0, 0.5);
+  background: linear-gradient(135deg, rgba(255, 165, 0, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.roi-result-card--info {
+  border-color: rgba(21, 67, 114, 0.5);
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.roi-result-card--success {
+  border-color: rgba(0, 255, 209, 0.5);
+  background: linear-gradient(135deg, rgba(0, 255, 209, 0.1) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.roi-result-card--highlight {
+  border-color: #00FFD1;
+  background: linear-gradient(135deg, rgba(0, 255, 209, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+  box-shadow: 0 0 30px rgba(0, 255, 209, 0.2);
+}
+
+.roi-result-card__label {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 10px;
+}
+
+.roi-result-card__value {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 42px;
+  font-weight: 100;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.roi-result-card--highlight .roi-result-card__value {
+  color: #00FFD1;
+}
+
+.roi-result-card__context {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Results Interpretation */
+.roi-results__interpretation {
+  background: rgba(0, 255, 209, 0.05);
+  border: 1px solid rgba(0, 255, 209, 0.2);
+  border-left: 4px solid #00FFD1;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 50px;
+}
+
+.roi-results__interpretation h4 {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #00FFD1;
+  margin: 0 0 15px 0;
+}
+
+.roi-results__interpretation p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.roi-interpretation--excellent {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.roi-interpretation--good {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.roi-interpretation--moderate {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.roi-interpretation--strategic {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Results CTA */
+.roi-results__cta {
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.1), rgba(193, 2, 48, 0.05));
+  border: 2px solid rgba(21, 67, 114, 0.3);
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+}
+
+.roi-results__cta h4 {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+}
+
+.roi-results__cta p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 30px 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.roi-results__cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.roi-cta-button {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 18px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid;
+}
+
+.roi-cta-button--primary {
+  background: linear-gradient(135deg, #00FFD1, #00CCA8);
+  color: #0D0D0D;
+  border-color: #00FFD1;
+}
+
+.roi-cta-button--primary:hover {
+  background: linear-gradient(135deg, #00E6BC, #00B897);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 255, 209, 0.4);
+}
+
+.roi-cta-button--secondary {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.roi-cta-button--secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Disclaimer */
+.roi-calculator__disclaimer {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 25px;
+  margin-top: 60px;
+}
+
+.roi-calculator__disclaimer p {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+.roi-calculator__disclaimer strong {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+  .roi-calculator__form {
+    padding: 30px 20px;
+  }
+
+  .roi-results__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .roi-results__cta-buttons {
+    flex-direction: column;
+  }
+
+  .roi-cta-button {
+    width: 100%;
+  }
+
+  .roi-result-card__value {
+    font-size: 32px;
+  }
+}

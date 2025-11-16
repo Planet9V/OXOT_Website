@@ -10,6 +10,7 @@ import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
 import ArticlesPage from './pages/ArticlesPage';
 import BlindSpotPage from './pages/BlindSpotPage';
+import ROICalculatorPage from './pages/ROICalculatorPage';
 import BackgroundTestPage from './pages/BackgroundTestPage';
 import './global.css';
 
@@ -38,6 +39,7 @@ function AppContent() {
       '/industries': 'Industries',
       '/articles': 'Research & Articles',
       '/blindspot': 'Blind Spots',
+      '/roi-calculator': 'ROI Calculator',
       '/about': 'About',
       '/contact': 'Contact',
       '/r3f-background-test': 'Background Test'
@@ -99,6 +101,7 @@ function AppContent() {
             <Route path="/articles/:articleId" element={<ArticlesPage />} />
             <Route path="/blindspot" element={<BlindSpotPage />} />
             <Route path="/blindspot/:blindspotId" element={<BlindSpotPage />} />
+            <Route path="/roi-calculator" element={<ROICalculatorPage />} />
             <Route path="/about" element={<SolutionsPage />} />
             <Route path="/contact" element={<IndustriesPage />} />
             <Route path="/r3f-background-test" element={<BackgroundTestPage />} />

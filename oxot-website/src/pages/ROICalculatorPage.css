@@ -1,0 +1,6 @@
+/* ROI Calculator Page Wrapper */
+.roi-calculator-page {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-body-dark);
+  min-height: 100vh;
+}
