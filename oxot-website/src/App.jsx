@@ -8,6 +8,12 @@ import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
 import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
+import ArticlesPage from './pages/ArticlesPage';
+import ArticleDetailPage from './pages/ArticleDetailPage';
+import SimulationHub from './pages/SimulationHub';
+import SimulationDetail from './pages/SimulationDetail';
+import AEONCyberTwinPage from './pages/AEONCyberTwinPage';
+import AgentRedPage from './pages/AgentRedPage';
 import './global.css';
 
 // Wrapper component to handle page transitions with routing
@@ -33,6 +39,10 @@ function AppContent() {
       '/solutions': 'Solutions',
       '/services': 'Services',
       '/industries': 'Industries',
+      '/aeon': 'AEON Cyber Digital Twin',
+      '/agent-red': 'Agent Red',
+      '/articles': 'Articles',
+      '/simulations': 'Simulations',
       '/about': 'About',
       '/contact': 'Contact'
     };
@@ -89,6 +99,12 @@ function AppContent() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:serviceName" element={<ServicesPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/aeon" element={<AEONCyberTwinPage />} />
+            <Route path="/agent-red" element={<AgentRedPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/articles/:id" element={<ArticleDetailPage />} />
+            <Route path="/simulations" element={<SimulationHub />} />
+            <Route path="/simulations/:id" element={<SimulationDetail />} />
             <Route path="/about" element={<SolutionsPage />} />
             <Route path="/contact" element={<IndustriesPage />} />
           </Routes>

@@ -159,6 +159,78 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Platform Features Section */}
+      <section className="platform-section">
+        <div className="platform-section__container">
+          <h2 className="platform-section__title">Advanced Security Platform</h2>
+          <p className="platform-section__subtitle">
+            Cutting-edge AI-powered tools and simulations for comprehensive critical infrastructure protection
+          </p>
+
+          <div className="platform-grid">
+            <a href="/aeon" className="platform-card platform-card--major">
+              <div className="platform-card__badge">Flagship Platform</div>
+              <div className="platform-card__icon">🧠</div>
+              <h3 className="platform-card__title">AEON Cyber Digital Twin</h3>
+              <p className="platform-card__description">
+                AI-powered digital twin with predictive analytics, threat modeling, and psychohistory-inspired
+                forecasting for critical infrastructure defense.
+              </p>
+              <div className="platform-card__features">
+                <span className="feature-tag">Deep Graph Intelligence</span>
+                <span className="feature-tag">20+ Hop Analysis</span>
+                <span className="feature-tag">SBOM Integration</span>
+              </div>
+              <span className="platform-card__cta">Explore Platform →</span>
+            </a>
+
+            <a href="/agent-red" className="platform-card platform-card--agent-red">
+              <div className="platform-card__badge">Autonomous Operations</div>
+              <div className="platform-card__icon">⚔️</div>
+              <h3 className="platform-card__title">Agent Red</h3>
+              <p className="platform-card__description">
+                Fully autonomous AI agents executing offensive frameworks with Agent-to-Agent coordination
+                for advanced red team operations.
+              </p>
+              <div className="platform-card__features">
+                <span className="feature-tag feature-tag--red">Metasploit Integration</span>
+                <span className="feature-tag feature-tag--red">A2A Protocol</span>
+                <span className="feature-tag feature-tag--red">OSINT Engine</span>
+              </div>
+              <span className="platform-card__cta platform-card__cta--red">View Capabilities →</span>
+            </a>
+
+            <a href="/simulations" className="platform-card">
+              <div className="platform-card__icon">🎯</div>
+              <h3 className="platform-card__title">Interactive Simulations</h3>
+              <p className="platform-card__description">
+                Hands-on simulations across all 16 CISA critical infrastructure sectors with real-time
+                threat scenarios and attack visualization.
+              </p>
+              <div className="platform-card__features">
+                <span className="feature-tag">16 CISA Sectors</span>
+                <span className="feature-tag">Live Scenarios</span>
+              </div>
+              <span className="platform-card__cta">Try Simulations →</span>
+            </a>
+
+            <a href="/articles" className="platform-card">
+              <div className="platform-card__icon">📚</div>
+              <h3 className="platform-card__title">Knowledge Center</h3>
+              <p className="platform-card__description">
+                In-depth technical articles, threat intelligence reports, and security research covering
+                the latest OT/ICS vulnerabilities and attack techniques.
+              </p>
+              <div className="platform-card__features">
+                <span className="feature-tag">Threat Research</span>
+                <span className="feature-tag">Best Practices</span>
+              </div>
+              <span className="platform-card__cta">Read Articles →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Industries Section */}
       <section className="industries-section">
         <div className="industries-section__container">

@@ -30,6 +30,20 @@ const Navigation = () => {
 
   const navigationItems = [
     {
+      page: 'aeon',
+      label: 'AEON Cyber Digital Twin',
+      href: '/aeon',
+      isService: false,
+      anchors: []
+    },
+    {
+      page: 'agent-red',
+      label: 'Agent Red',
+      href: '/agent-red',
+      isService: false,
+      anchors: []
+    },
+    {
       page: 'service-institutional-banking',
       label: 'Institutional Banking',
       href: '/service/institutional-banking',
@@ -63,6 +77,20 @@ const Navigation = () => {
         { index: 0, label: 'Correspondent Lending', href: '#mortgage_correspondent' },
         { index: 1, label: 'Warehouse Lending', href: '#mortgage_warehouse' }
       ]
+    },
+    {
+      page: 'articles',
+      label: 'Knowledge Center',
+      href: '/articles',
+      isService: false,
+      anchors: []
+    },
+    {
+      page: 'simulations',
+      label: 'Interactive Simulations',
+      href: '/simulations',
+      isService: false,
+      anchors: []
     },
     {
       page: 'about',

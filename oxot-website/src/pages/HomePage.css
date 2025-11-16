@@ -240,6 +240,282 @@
   text-transform: uppercase;
 }
 
+/* Platform Features Section */
+.platform-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1b1c 50%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-section::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  height: 1200px;
+  background: radial-gradient(circle, rgba(21, 67, 114, 0.08) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: pulse-glow 8s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.platform-section__container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-vw-desktop, 7.15vw);
+  position: relative;
+  z-index: 1;
+}
+
+.platform-section__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: clamp(32px, 4vw, 56px);
+  font-weight: 100;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.platform-section__subtitle {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 800px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* Platform Grid */
+.platform-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Platform Cards */
+.platform-card {
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.08) 0%, rgba(26, 27, 28, 0.6) 100%);
+  border: 1px solid rgba(21, 67, 114, 0.2);
+  border-radius: 16px;
+  padding: 50px 40px;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(10px);
+}
+
+.platform-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #154372, transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.platform-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(21, 67, 114, 0.15) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.platform-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(21, 67, 114, 0.5);
+  box-shadow: 0 30px 60px rgba(21, 67, 114, 0.25), 0 0 0 1px rgba(21, 67, 114, 0.1) inset;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.15) 0%, rgba(26, 27, 28, 0.8) 100%);
+}
+
+.platform-card:hover::before {
+  transform: scaleX(1);
+}
+
+.platform-card:hover::after {
+  opacity: 1;
+}
+
+/* Major Platform Card (AEON - spans 2 columns on desktop) */
+.platform-card--major {
+  grid-column: span 2;
+  background: linear-gradient(135deg, rgba(21, 67, 114, 0.12) 0%, rgba(26, 27, 28, 0.7) 100%);
+  border: 1px solid rgba(21, 67, 114, 0.3);
+}
+
+.platform-card--major:hover {
+  box-shadow: 0 40px 80px rgba(21, 67, 114, 0.35), 0 0 0 1px rgba(21, 67, 114, 0.2) inset;
+}
+
+/* Agent Red Card - Red Accents Only */
+.platform-card--agent-red {
+  background: linear-gradient(135deg, rgba(193, 2, 48, 0.08) 0%, rgba(26, 27, 28, 0.6) 100%);
+  border: 1px solid rgba(193, 2, 48, 0.2);
+}
+
+.platform-card--agent-red::before {
+  background: linear-gradient(90deg, #c10230, transparent);
+}
+
+.platform-card--agent-red:hover {
+  border-color: rgba(193, 2, 48, 0.5);
+  box-shadow: 0 30px 60px rgba(193, 2, 48, 0.25), 0 0 0 1px rgba(193, 2, 48, 0.1) inset;
+  background: linear-gradient(135deg, rgba(193, 2, 48, 0.15) 0%, rgba(26, 27, 28, 0.8) 100%);
+}
+
+.platform-card--agent-red::after {
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(193, 2, 48, 0.15) 0%, transparent 50%);
+}
+
+/* Card Badge */
+.platform-card__badge {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #154372;
+  background: rgba(21, 67, 114, 0.15);
+  border: 1px solid rgba(21, 67, 114, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  align-self: flex-start;
+  transition: all 0.3s ease;
+}
+
+.platform-card--agent-red .platform-card__badge {
+  color: #c10230;
+  background: rgba(193, 2, 48, 0.15);
+  border-color: rgba(193, 2, 48, 0.3);
+}
+
+.platform-card:hover .platform-card__badge {
+  background: rgba(21, 67, 114, 0.25);
+  border-color: rgba(21, 67, 114, 0.5);
+}
+
+.platform-card--agent-red:hover .platform-card__badge {
+  background: rgba(193, 2, 48, 0.25);
+  border-color: rgba(193, 2, 48, 0.5);
+}
+
+/* Card Icon */
+.platform-card__icon {
+  font-size: 56px;
+  margin-bottom: 24px;
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 4px 12px rgba(21, 67, 114, 0.3));
+}
+
+.platform-card:hover .platform-card__icon {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* Card Title */
+.platform-card__title {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+}
+
+/* Card Description */
+.platform-card__description {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 24px 0;
+  flex-grow: 1;
+}
+
+/* Feature Tags */
+.platform-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.feature-tag {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(21, 67, 114, 0.2);
+  border: 1px solid rgba(21, 67, 114, 0.3);
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.feature-tag--red {
+  background: rgba(193, 2, 48, 0.2);
+  border-color: rgba(193, 2, 48, 0.3);
+}
+
+.platform-card:hover .feature-tag {
+  background: rgba(21, 67, 114, 0.3);
+  border-color: rgba(21, 67, 114, 0.5);
+}
+
+.platform-card--agent-red:hover .feature-tag--red {
+  background: rgba(193, 2, 48, 0.3);
+  border-color: rgba(193, 2, 48, 0.5);
+}
+
+/* Card CTA */
+.platform-card__cta {
+  font-family: 'Suisse Intl', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #154372;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.platform-card__cta--red {
+  color: #c10230;
+}
+
+.platform-card:hover .platform-card__cta {
+  color: #1a5a8f;
+  transform: translateX(5px);
+}
+
+.platform-card--agent-red:hover .platform-card__cta--red {
+  color: #e60335;
+}
+
 /* Industries Section */
 .industries-section {
   padding: 120px 0;
@@ -304,6 +580,7 @@
 @media screen and (max-width: 1024px) {
   .services-section,
   .value-section,
+  .platform-section,
   .industries-section {
     padding: 80px 0;
   }
@@ -316,17 +593,36 @@
   .value-section__stats {
     gap: 40px;
   }
+
+  .platform-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .platform-card--major {
+    grid-column: span 1;
+  }
+
+  .platform-card {
+    padding: 40px 30px;
+  }
+
+  .platform-section__subtitle {
+    margin-bottom: 60px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .services-section__container,
   .value-section__container,
+  .platform-section__container,
   .industries-section__container {
     padding: 0 var(--spacing-vw-mobile, 11.11vw);
   }
 
   .services-section,
   .value-section,
+  .platform-section,
   .industries-section {
     padding: 60px 0;
   }
@@ -348,6 +644,32 @@
   .industries-grid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .platform-section__title {
+    margin-bottom: 16px;
+  }
+
+  .platform-section__subtitle {
+    margin-bottom: 40px;
+    font-size: 16px;
+  }
+
+  .platform-card {
+    padding: 32px 24px;
+  }
+
+  .platform-card__icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .platform-card__title {
+    font-size: 24px;
+  }
+
+  .platform-card__description {
+    font-size: 15px;
   }
 
   .trust-banner__content {
@@ -372,6 +694,7 @@
 /* Hardware Acceleration */
 .service-card,
 .industry-card,
+.platform-card,
 .value-section__title {
   will-change: transform, opacity;
   backface-visibility: hidden;
