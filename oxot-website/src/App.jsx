@@ -8,6 +8,8 @@ import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
 import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
+import ArticlesPage from './pages/ArticlesPage';
+import BlindSpotPage from './pages/BlindSpotPage';
 import BackgroundTestPage from './pages/BackgroundTestPage';
 import './global.css';
 
@@ -34,6 +36,8 @@ function AppContent() {
       '/solutions': 'Solutions',
       '/services': 'Services',
       '/industries': 'Industries',
+      '/articles': 'Research & Articles',
+      '/blindspot': 'Blind Spots',
       '/about': 'About',
       '/contact': 'Contact',
       '/r3f-background-test': 'Background Test'
@@ -91,6 +95,10 @@ function AppContent() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:serviceName" element={<ServicesPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/articles/:articleId" element={<ArticlesPage />} />
+            <Route path="/blindspot" element={<BlindSpotPage />} />
+            <Route path="/blindspot/:blindspotId" element={<BlindSpotPage />} />
             <Route path="/about" element={<SolutionsPage />} />
             <Route path="/contact" element={<IndustriesPage />} />
             <Route path="/r3f-background-test" element={<BackgroundTestPage />} />

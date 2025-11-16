@@ -1,0 +1,399 @@
+/* Blind Spot Page Styles */
+.blindspot-page {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-body-dark);
+  min-height: 100vh;
+}
+
+/* Hero */
+.blindspot-hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+}
+
+.blindspot-hero__badge {
+  display: inline-block;
+  background: rgba(193, 2, 48, 0.2);
+  color: #FF5555;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 85, 85, 0.3);
+}
+
+.blindspot-hero__title {
+  font-size: 52px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.blindspot-hero__subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  opacity: 0.8;
+}
+
+.blindspot-hero__warning {
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(193, 2, 48, 0.1);
+  border: 1px solid rgba(193, 2, 48, 0.3);
+  border-left: 4px solid #c10230;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  gap: 15px;
+  text-align: left;
+}
+
+.warning-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.warning-text {
+  line-height: 1.5;
+}
+
+.warning-text strong {
+  color: #FF5555;
+}
+
+/* Severity Legend */
+.severity-legend {
+  padding: 40px 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.severity-legend__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.severity-legend h3 {
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.severity-badges {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.severity-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  border: 1px solid;
+  font-size: 14px;
+}
+
+.severity-badge--critical {
+  background: rgba(255, 0, 0, 0.1);
+  border-color: rgba(255, 0, 0, 0.3);
+  color: #FF5555;
+}
+
+.severity-badge--high {
+  background: rgba(255, 165, 0, 0.1);
+  border-color: rgba(255, 165, 0, 0.3);
+  color: #FFA500;
+}
+
+.severity-badge--medium {
+  background: rgba(255, 255, 0, 0.1);
+  border-color: rgba(255, 255, 0, 0.3);
+  color: #FFFF55;
+}
+
+/* Blind Spots Grid */
+.blindspots-grid-section {
+  padding: 60px 20px;
+}
+
+.blindspots-grid__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blindspots-grid__container h2 {
+  margin-bottom: 40px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.blindspots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.blindspot-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid;
+  padding: 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.blindspot-card--critical {
+  border-color: rgba(255, 0, 0, 0.3);
+}
+
+.blindspot-card--high {
+  border-color: rgba(255, 165, 0, 0.3);
+}
+
+.blindspot-card--medium {
+  border-color: rgba(255, 255, 0, 0.3);
+}
+
+.blindspot-card:hover {
+  transform: translateY(-5px);
+}
+
+.blindspot-card--critical:hover {
+  background: rgba(255, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.2);
+}
+
+.blindspot-card--high:hover {
+  background: rgba(255, 165, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(255, 165, 0, 0.2);
+}
+
+.blindspot-card--medium:hover {
+  background: rgba(255, 255, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 0, 0.2);
+}
+
+.blindspot-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.blindspot-card__number {
+  font-size: 48px;
+  font-weight: 100;
+  opacity: 0.2;
+}
+
+.blindspot-card__severity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.severity--critical {
+  color: #FF5555;
+}
+
+.severity--high {
+  color: #FFA500;
+}
+
+.severity--medium {
+  color: #FFFF55;
+}
+
+.blindspot-card__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.blindspot-card__subtitle {
+  font-size: 14px;
+  opacity: 0.6;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.blindspot-card__excerpt {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.blindspot-card__impact {
+  background: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #c10230;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}
+
+.impact-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #FF5555;
+  margin-bottom: 5px;
+}
+
+.impact-text {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.blindspot-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.blindspot-card__cta {
+  color: #00FFD1;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Interconnected Risks */
+.interconnected-risks {
+  padding: 80px 20px;
+  background: rgba(193, 2, 48, 0.05);
+}
+
+.interconnected-risks__container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.interconnected-risks h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.interconnected-risks p {
+  line-height: 1.6;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.risk-chain-diagram {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.risk-chain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.risk-node {
+  background: rgba(193, 2, 48, 0.2);
+  border: 1px solid rgba(193, 2, 48, 0.5);
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.risk-arrow {
+  font-size: 24px;
+  color: #c10230;
+}
+
+/* CTA */
+.blindspot-cta {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.blindspot-cta__container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blindspot-cta h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.blindspot-cta p {
+  margin-bottom: 30px;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.blindspot-cta__buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.blindspot-cta__button {
+  padding: 15px 35px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.blindspot-cta__button--primary {
+  background: #c10230;
+  color: #fff;
+}
+
+.blindspot-cta__button--primary:hover {
+  background: #a00228;
+  transform: translateY(-2px);
+}
+
+.blindspot-cta__button--secondary {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.blindspot-cta__button--secondary:hover {
+  border-color: #c10230;
+  color: #c10230;
+}
+
+@media (max-width: 768px) {
+  .blindspot-hero__title {
+    font-size: 36px;
+  }
+
+  .blindspots-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .risk-chain {
+    flex-direction: column;
+  }
+
+  .risk-arrow {
+    transform: rotate(90deg);
+  }
+}
