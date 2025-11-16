@@ -65,6 +65,20 @@ const Navigation = () => {
       ]
     },
     {
+      page: 'articles',
+      label: 'Knowledge Center',
+      href: '/articles',
+      isService: false,
+      anchors: []
+    },
+    {
+      page: 'simulations',
+      label: 'Interactive Simulations',
+      href: '/simulations',
+      isService: false,
+      anchors: []
+    },
+    {
       page: 'about',
       label: 'About',
       href: '/about',

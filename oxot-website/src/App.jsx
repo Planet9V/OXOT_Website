@@ -8,6 +8,10 @@ import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
 import ServicesPage from './pages/ServicesPage';
 import IndustriesPage from './pages/IndustriesPage';
+import ArticlesPage from './pages/ArticlesPage';
+import ArticleDetailPage from './pages/ArticleDetailPage';
+import SimulationHub from './pages/SimulationHub';
+import SimulationDetail from './pages/SimulationDetail';
 import './global.css';
 
 // Wrapper component to handle page transitions with routing
@@ -33,6 +37,8 @@ function AppContent() {
       '/solutions': 'Solutions',
       '/services': 'Services',
       '/industries': 'Industries',
+      '/articles': 'Articles',
+      '/simulations': 'Simulations',
       '/about': 'About',
       '/contact': 'Contact'
     };
@@ -89,6 +95,10 @@ function AppContent() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/service/:serviceName" element={<ServicesPage />} />
             <Route path="/industries" element={<IndustriesPage />} />
+            <Route path="/articles" element={<ArticlesPage />} />
+            <Route path="/articles/:id" element={<ArticleDetailPage />} />
+            <Route path="/simulations" element={<SimulationHub />} />
+            <Route path="/simulations/:id" element={<SimulationDetail />} />
             <Route path="/about" element={<SolutionsPage />} />
             <Route path="/contact" element={<IndustriesPage />} />
           </Routes>
