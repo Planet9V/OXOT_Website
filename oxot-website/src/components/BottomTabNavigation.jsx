@@ -3,9 +3,9 @@ import './BottomTabNavigation.css';
 
 const BottomTabNavigation = ({ activeTab, onTabChange }) => {
   const tabs = [
-    { id: 'institutional', label: 'INSTITUTIONAL' },
-    { id: 'commercial', label: 'COMMERCIAL' },
-    { id: 'mortgage', label: 'MORTGAGE' },
+    { id: 'solutions', label: 'SOLUTIONS' },
+    { id: 'services', label: 'SERVICES' },
+    { id: 'knowledge', label: 'KNOWLEDGE HUB' },
   ];
 
   return (

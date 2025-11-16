@@ -30,39 +30,47 @@ const Navigation = () => {
 
   const navigationItems = [
     {
-      page: 'service-institutional-banking',
-      label: 'Institutional Banking',
-      href: '/service/institutional-banking',
-      menuSection: 'institutional',
+      page: 'solutions',
+      label: 'Solutions',
+      href: '/solutions',
+      menuSection: 'solutions',
       isService: true,
       anchors: [
-        { index: 0, label: 'Financial Institutions', href: '#institutional_financial_institutions' },
-        { index: 1, label: 'Investment Management', href: '#institutional_investment_management' },
-        { index: 2, label: 'Government Banking', href: '#institutional_government_banking' }
+        { index: 0, label: 'Breach Disclosure Mitigation', href: '#solution_breach_disclosure' },
+        { index: 1, label: 'Digital Twin', href: '#solution_digital_twin' },
+        { index: 2, label: 'Cyber Defender Program', href: '#solution_cyber_defender' }
       ]
     },
     {
-      page: 'service-commercial-banking',
-      label: 'Commercial Banking',
-      href: '/service/commercial-banking',
-      menuSection: 'commercial',
+      page: 'services',
+      label: 'Services',
+      href: '/services',
+      menuSection: 'services',
       isService: true,
       anchors: [
-        { index: 0, label: 'Real Estate', href: '#commercial_real_estate' },
-        { index: 1, label: 'Middle Market', href: '#commercial_middle_market' },
-        { index: 2, label: 'Asset-Based Lending', href: '#commercial_asset_based' }
+        { index: 0, label: 'IEC 62443 Compliance', href: '#service_iec62443' },
+        { index: 1, label: 'Railway Security', href: '#service_railway' },
+        { index: 2, label: 'Data Center Security', href: '#service_datacenter' }
       ]
     },
     {
-      page: 'service-mortgage-banking',
-      label: 'Mortgage Banking',
-      href: '/service/mortgage-banking',
-      menuSection: 'mortgage',
+      page: 'knowledge',
+      label: 'Knowledge Hub',
+      href: '/articles',
+      menuSection: 'knowledge',
       isService: true,
       anchors: [
-        { index: 0, label: 'Correspondent Lending', href: '#mortgage_correspondent' },
-        { index: 1, label: 'Warehouse Lending', href: '#mortgage_warehouse' }
+        { index: 0, label: 'Technical Articles', href: '/articles' },
+        { index: 1, label: 'Blind Spots', href: '/blindspots' },
+        { index: 2, label: 'Simulations', href: '/simulations' }
       ]
+    },
+    {
+      page: 'industries',
+      label: 'Industries',
+      href: '/industries',
+      isService: false,
+      anchors: []
     },
     {
       page: 'about',
@@ -186,10 +194,10 @@ const Navigation = () => {
 
           <a
             className="nav__login underlined-cta"
-            href="/onlinebanking"
+            href="/contact"
             onClick={() => setIsOpen(false)}
           >
-            <span className="nav__login__text">Online Banking Login</span>
+            <span className="nav__login__text">Request Consultation</span>
           </a>
         </div>
       </nav>

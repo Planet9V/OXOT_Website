@@ -1,254 +1,278 @@
 /**
  * Global Menu Data Structure
  * File: /src/data/menuData.js
- * Created: 2025-11-13
- * Version: 1.0.0
- * Purpose: Centralized menu data for all sections (Institutional, Commercial, Mortgage)
+ * Created: 2025-11-16
+ * Version: 2.0.0
+ * Purpose: Centralized menu data for OXOT Solutions and Services
  * Status: ACTIVE
  */
 
 export const menuData = {
-  institutional: {
-    id: "institutional",
-    title: "INSTITUTIONAL BANKING",
-    description: "NexBank is a trusted partner for large organizations, providing comprehensive financial solutions designed to meet the complex needs of institutional clients. Our expertise spans asset management, treasury services, and strategic advisory.",
+  solutions: {
+    id: "solutions",
+    title: "OXOT SOLUTIONS",
+    description: "Transformative cybersecurity solutions designed for critical infrastructure. Our flagship products deliver measurable protection, operational resilience, and confidential assurance for your most sensitive environments.",
     backgroundType: "animated",
     services: [
       {
         id: "01",
-        name: "Conforming Loans",
-        description: "Traditional mortgage products meeting GSE guidelines with competitive pricing and fast approval processes.",
+        name: "Breach Disclosure Mitigation",
+        description: "OXOT True Diligence™ - Security telemetry protected under legal privilege with AI-powered disclosure risk analysis.",
         features: [
-          "Fixed and adjustable rates",
-          "Competitive pricing structure",
-          "Streamlined approval process",
-          "Flexible terms up to 30 years"
+          "Attorney-client privilege protection",
+          "AI-powered risk analysis",
+          "Executive liability mitigation",
+          "Crisis management orchestration"
         ],
         cta: {
           label: "Learn More",
-          url: "/services/conforming",
+          url: "/solutions/breach-disclosure",
           type: "primary"
         }
       },
       {
         id: "02",
-        name: "Government Loans",
-        description: "FHA, VA, and USDA loan programs designed for first-time buyers and military personnel.",
+        name: "Digital Twin for Resilience",
+        description: "OXOT CyberOperative - Real-time operational technology modeling with integrated security correlation.",
         features: [
-          "Low down payment options",
-          "Flexible credit requirements",
-          "Specialized veteran programs",
-          "USDA rural development loans"
-        ]
+          "Live asset monitoring",
+          "Predictive threat hunting",
+          "OT/IT convergence modeling",
+          "Continuous resilience validation"
+        ],
+        cta: {
+          label: "Explore Digital Twin",
+          url: "/solutions/digital-twin",
+          type: "primary"
+        }
       },
       {
         id: "03",
-        name: "Asset Management",
-        description: "Comprehensive portfolio management and investment strategies for institutional investors.",
+        name: "Cyber Defender Program",
+        description: "OXOT Defender - Comprehensive protection for distributed energy resources and smart grid infrastructure.",
         features: [
-          "Customized investment portfolios",
-          "Risk management solutions",
-          "Performance analytics",
-          "ESG investment options"
-        ]
+          "Smart meter security orchestration",
+          "Microgrid protection frameworks",
+          "DER integration safeguards",
+          "Real-time threat correlation"
+        ],
+        cta: {
+          label: "View Program",
+          url: "/solutions/cyber-defender",
+          type: "primary"
+        }
       },
       {
         id: "04",
-        name: "Treasury Services",
-        description: "Advanced cash management and liquidity solutions for institutional operations.",
+        name: "Confidential SOC-as-a-Service",
+        description: "Privacy-first 24/7 security operations with enterprise-grade protection and confidentiality guarantees.",
         features: [
-          "Multi-currency accounts",
-          "Automated reconciliation",
-          "Real-time reporting",
-          "Fraud prevention tools"
-        ]
+          "Attorney-client privilege optional",
+          "Zero data retention policies",
+          "Dedicated security analysts",
+          "Threat intelligence integration"
+        ],
+        cta: {
+          label: "Get Protected",
+          url: "/solutions/soc-as-service",
+          type: "primary"
+        }
       },
       {
         id: "05",
-        name: "Strategic Advisory",
-        description: "Expert financial advisory services for mergers, acquisitions, and corporate restructuring.",
+        name: "IEC 62443 Compliance",
+        description: "End-to-end implementation of industrial cybersecurity standards with zone/conduit architecture design.",
         features: [
-          "M&A transaction support",
-          "Valuation services",
-          "Due diligence coordination",
-          "Regulatory compliance guidance"
-        ]
+          "Gap assessment (SL-A vs SL-T)",
+          "Zone and conduit design",
+          "Security Level determination",
+          "Certification support"
+        ],
+        cta: {
+          label: "Start Assessment",
+          url: "/services/iec-62443",
+          type: "primary"
+        }
       }
     ],
     metadata: {
-      createdAt: "2025-11-13",
-      updatedAt: "2025-11-13",
-      version: "1.0.0"
+      createdAt: "2025-11-16",
+      updatedAt: "2025-11-16",
+      version: "2.0.0"
     }
   },
 
-  commercial: {
-    id: "commercial",
-    title: "COMMERCIAL BANKING",
-    description: "Empowering businesses with tailored banking solutions that drive growth and operational efficiency. From commercial real estate to working capital solutions, we understand the unique challenges facing modern enterprises.",
+  services: {
+    id: "services",
+    title: "SECURITY SERVICES",
+    description: "Comprehensive OT/ICS cybersecurity services tailored for critical infrastructure operators. From assessment to implementation, we secure your operational technology environments against evolving threats.",
     backgroundType: "geometric",
     services: [
       {
         id: "01",
-        name: "Commercial Real Estate",
-        description: "Comprehensive financing solutions for office buildings, retail centers, and industrial properties.",
+        name: "Cyber Assurance & Testing",
+        description: "Comprehensive risk assessments and adversarial testing to validate your OT/ICS security posture.",
         features: [
-          "Competitive interest rates",
-          "Flexible loan structures",
-          "Up to 80% LTV financing",
-          "Quick approval process"
+          "IEC 62443 gap assessments",
+          "Penetration testing (OT-safe)",
+          "Red team exercises",
+          "Defense validation"
         ],
         cta: {
-          label: "Explore Options",
-          url: "/services/commercial-real-estate",
+          label: "Request Assessment",
+          url: "/services/assurance-testing",
           type: "primary"
         }
       },
       {
         id: "02",
-        name: "Business Lines of Credit",
-        description: "Flexible revolving credit facilities to manage cash flow and operational expenses.",
+        name: "Crisis Management",
+        description: "Program development and interactive exercises to prepare for and respond to cyber incidents.",
         features: [
-          "Unsecured and secured options",
-          "Competitive interest rates",
-          "Online account management",
-          "Quick access to funds"
+          "Incident response planning",
+          "Tabletop exercises",
+          "Crisis simulation programs",
+          "Recovery orchestration"
         ]
       },
       {
         id: "03",
-        name: "Equipment Financing",
-        description: "Specialized financing for machinery, technology, and business equipment purchases.",
+        name: "Cyber Engineering & Integration",
+        description: "Secure facility design, network segmentation, and digital twin modeling for operational resilience.",
         features: [
-          "Up to 100% equipment financing",
-          "Flexible repayment terms",
-          "Tax advantages available",
-          "New and used equipment"
+          "Zone/conduit architecture",
+          "Network segmentation design",
+          "Digital twin implementation",
+          "Secure remote access"
         ]
       },
       {
         id: "04",
-        name: "SBA Loans",
-        description: "Government-backed small business loans with favorable terms and competitive rates.",
+        name: "Railway Security (TS 50701)",
+        description: "Specialized cybersecurity for rail operators, integrators, and component manufacturers.",
         features: [
-          "SBA 7(a) and 504 programs",
-          "Lower down payments",
-          "Longer repayment periods",
-          "Expert SBA guidance"
-        ]
+          "TS 50701 compliance roadmap",
+          "IEC 62443 + railway integration",
+          "Onboard/trackside security",
+          "Supply chain validation"
+        ],
+        cta: {
+          label: "Railway Solutions",
+          url: "/services/railway-security",
+          type: "primary"
+        }
       },
       {
         id: "05",
-        name: "Merchant Services",
-        description: "Complete payment processing solutions for businesses of all sizes.",
+        name: "Data Center Security",
+        description: "Tier III/IV data center security architecture, threat modeling, and continuous monitoring.",
         features: [
-          "Credit card processing",
-          "Point-of-sale systems",
-          "E-commerce integration",
-          "Mobile payment options"
+          "Physical + cyber integration",
+          "Hyperscale facility protection",
+          "Compliance (SOC 2, ISO 27001)",
+          "Supply chain assurance"
         ]
       },
       {
         id: "06",
-        name: "Business Checking",
-        description: "Comprehensive business checking accounts with digital banking capabilities.",
+        name: "Training & Awareness",
+        description: "Cyber Defender First Responder training and customized security awareness programs.",
         features: [
-          "No minimum balance requirements",
-          "Free online banking",
-          "Mobile deposit capture",
-          "Integration with accounting software"
+          "OT-specific training modules",
+          "Hands-on simulation exercises",
+          "Awareness campaigns",
+          "Certification programs"
         ]
       }
     ],
     metadata: {
-      createdAt: "2025-11-13",
-      updatedAt: "2025-11-13",
-      version: "1.0.0"
+      createdAt: "2025-11-16",
+      updatedAt: "2025-11-16",
+      version: "2.0.0"
     }
   },
 
-  mortgage: {
-    id: "mortgage",
-    title: "MORTGAGE SERVICES",
-    description: "Making homeownership accessible through innovative mortgage solutions. Whether you're a first-time homebuyer or looking to refinance, our experienced team provides personalized guidance throughout the entire process.",
+  knowledge: {
+    id: "knowledge",
+    title: "KNOWLEDGE HUB",
+    description: "Deep-dive technical articles, blind spot analyses, and research on industrial cybersecurity. Expert insights on IEC 62443, TS 50701, supply chain risks, and sector-specific threats.",
     backgroundType: "animated",
     services: [
       {
         id: "01",
-        name: "Purchase Loans",
-        description: "Comprehensive financing options for first-time and repeat homebuyers.",
+        name: "Technical Articles",
+        description: "40+ professional articles on IEC 62443, sector architectures, and implementation guidance.",
         features: [
-          "Conventional and jumbo loans",
-          "Low down payment programs",
-          "First-time buyer assistance",
-          "Pre-approval services"
+          "IEC 62443 implementation guides",
+          "Sector-specific architectures",
+          "Standards deep-dives",
+          "Best practices & frameworks"
         ],
         cta: {
-          label: "Get Pre-Approved",
-          url: "/services/purchase-loans",
+          label: "Browse Articles",
+          url: "/articles",
           type: "primary"
         }
       },
       {
         id: "02",
-        name: "Refinancing",
-        description: "Rate and term refinancing to lower monthly payments or access home equity.",
+        name: "Blind Spot Analysis",
+        description: "Critical vulnerability insights that others miss - supply chain risks, SL-T gaps, and sector blind spots.",
         features: [
-          "Rate reduction options",
-          "Cash-out refinancing",
-          "Streamline refinance programs",
-          "No closing cost options"
-        ]
+          "Supply chain vulnerabilities",
+          "SL-T procurement gaps",
+          "Handover security risks",
+          "Operational jeopardy analysis"
+        ],
+        cta: {
+          label: "View Blind Spots",
+          url: "/blindspots",
+          type: "primary"
+        }
       },
       {
         id: "03",
-        name: "FHA Loans",
-        description: "Government-insured mortgages with low down payments and flexible credit requirements.",
+        name: "Research & Whitepapers",
+        description: "In-depth research on M&A cybersecurity, threat landscapes, and emerging risks.",
         features: [
-          "As low as 3.5% down",
-          "Credit scores from 580",
-          "Gift fund assistance allowed",
-          "Assumable mortgages"
+          "Cyber-informed M&A frameworks",
+          "Threat landscape reports",
+          "Geopolitical risk analysis",
+          "Incident case studies"
         ]
       },
       {
         id: "04",
-        name: "VA Loans",
-        description: "Exclusive mortgage benefits for military service members and veterans.",
+        name: "Interactive Simulations",
+        description: "Hands-on simulations of critical infrastructure facilities to visualize security concepts.",
         features: [
-          "Zero down payment",
-          "No private mortgage insurance",
-          "Competitive interest rates",
-          "Funding fee waivers available"
-        ]
+          "Hydroelectric facility simulation",
+          "SCADA architecture demos",
+          "Attack scenario modeling",
+          "Zone/conduit visualizations"
+        ],
+        cta: {
+          label: "Try Simulations",
+          url: "/simulations",
+          type: "primary"
+        }
       },
       {
         id: "05",
-        name: "Jumbo Loans",
-        description: "Financing for luxury properties exceeding conventional loan limits.",
+        name: "Industry Standards",
+        description: "Comprehensive guides to IEC 62443, TS 50701, NERC CIP, and other critical infrastructure standards.",
         features: [
-          "Loans up to $5 million",
-          "Competitive jumbo rates",
-          "Flexible underwriting",
-          "Investment property options"
-        ]
-      },
-      {
-        id: "06",
-        name: "Construction Loans",
-        description: "One-time close construction-to-permanent financing for custom homes.",
-        features: [
-          "Single closing process",
-          "Interest-only during construction",
-          "Builder flexibility",
-          "Convert to permanent loan"
+          "IEC 62443 complete guide",
+          "TS 50701 railway standard",
+          "NERC CIP compliance",
+          "Standards crosswalk"
         ]
       }
     ],
     metadata: {
-      createdAt: "2025-11-13",
-      updatedAt: "2025-11-13",
-      version: "1.0.0"
+      createdAt: "2025-11-16",
+      updatedAt: "2025-11-16",
+      version: "2.0.0"
     }
   }
 };

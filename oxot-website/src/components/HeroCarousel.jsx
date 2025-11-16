@@ -10,7 +10,7 @@ import './HeroCarousel.css';
 
 const HeroCarousel = ({ slides }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [activeTab, setActiveTab] = useState('institutional');
+  const [activeTab, setActiveTab] = useState('solutions');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentMenuSection, setCurrentMenuSection] = useState(null);
   const carouselRef = useRef(null);
@@ -124,8 +124,8 @@ const HeroCarousel = ({ slides }) => {
       {/* Bottom Tab Navigation */}
       <BottomTabNavigation activeTab={activeTab} onTabChange={handleTabChange} />
 
-      {/* Vertical Text - Online Banking Login */}
-      <VerticalText text="Online Banking Login" />
+      {/* Vertical Text - Request Consultation */}
+      <VerticalText text="Request Consultation" />
 
       {/* 3-Slide Menu Overlay - NexBank Style */}
       {isMenuOpen && currentMenuSection && menuData[currentMenuSection] && (
